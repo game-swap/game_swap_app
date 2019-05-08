@@ -11,7 +11,7 @@ server.use(morgan('dev'));
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 
-// server.use('/api', router);
+server.use('/api', router);
 
 server.use(express.static(path.join(__dirname, '/../client/dist')));
 
