@@ -3,6 +3,7 @@ import { StyleSheet, View, ScrollView, Text } from 'react-native';
 import { Header, SearchBar, ButtonGroup } from 'react-native-elements';
 import Logo from './logo.js';
 import Game from './game.js';
+import Trade from './trade.js';
 
 export default class Home extends Component {
   constructor(props) {
@@ -10,59 +11,61 @@ export default class Home extends Component {
     this.state = {
       search: '',
       console: '',
+      consoleIndex: null,
+      trade: false,
       games: [
         {
-          img:
+          cover:
             'https://images.g2a.com/newlayout/470x470/1x1x0/b99b28590aea/5bc9c521ae653a5fd7677389',
-          title: 'Red Dead Redemption 2',
+          name: 'Red Dead Redemption 2',
           console: 'XBox One'
         },
         {
-          img:
+          cover:
             'https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Kingdom_Hearts_III_box_art.jpg/220px-Kingdom_Hearts_III_box_art.jpg',
-          title: 'Kingdom Hearts III',
+          name: 'Kingdom Hearts III',
           console: 'XBox One'
         },
         {
-          img:
+          cover:
             'https://www.mobygames.com/images/covers/l/541579-anthem-legion-of-dawn-edition-playstation-4-front-cover.jpg',
-          title: 'Anthem',
+          name: 'Anthem',
           console: 'XBox One'
         },
         {
-          img:
+          cover:
             'https://images.g2a.com/newlayout/470x470/1x1x0/b99b28590aea/5bc9c521ae653a5fd7677389',
-          title: 'Red Dead Redemption 2',
+          name: 'Red Dead Redemption 2',
           console: 'PS4'
         },
         {
-          img:
+          cover:
             'https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Kingdom_Hearts_III_box_art.jpg/220px-Kingdom_Hearts_III_box_art.jpg',
-          title: 'Kingdom Hearts III',
+          name: 'Kingdom Hearts III',
           console: 'PS4'
         },
         {
-          img:
+          cover:
             'https://www.mobygames.com/images/covers/l/541579-anthem-legion-of-dawn-edition-playstation-4-front-cover.jpg',
-          title: 'Anthem',
+          name: 'Anthem',
           console: 'PS4'
         },
         {
-          img:
+          cover:
             'https://images.g2a.com/newlayout/470x470/1x1x0/b99b28590aea/5bc9c521ae653a5fd7677389',
-          title: 'Red Dead Redemption 2',
+          name: 'Red Dead Redemption 2',
           console: 'Switch'
         },
         {
-          img:
+          cover:
             'https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Kingdom_Hearts_III_box_art.jpg/220px-Kingdom_Hearts_III_box_art.jpg',
-          title: 'Kingdom Hearts III',
+          name: 'Kingdom Hearts III',
           console: 'Switch'
         },
         {
-          img:
+          cover:
             'https://www.mobygames.com/images/covers/l/541579-anthem-legion-of-dawn-edition-playstation-4-front-cover.jpg',
-          title: 'Anthem',
+          name: 'Anthem',
           console: 'Switch'
         }
       ],
@@ -75,19 +78,34 @@ export default class Home extends Component {
     this.setState({ search, filteredGames });
   };
 
-  updateConsole = e => {
+  updateConsole = consoleIndex => {
     let buttons = ['XBox One', 'PS4', 'Switch'];
-    let filteredGames = this.filterByConsole(buttons[e]);
-    this.setState({ console: buttons[e], filteredGames });
+    if (consoleIndex === this.state.consoleIndex) {
+      this.setState({ console: '', consoleIndex: null }, () => {
+        let filteredGames = this.state.search
+          ? this.filterBySearch(this.state.search)
+          : [];
+        this.setState({ filteredGames });
+      });
+    } else {
+      let filteredGames = this.filterByConsole(buttons[consoleIndex]);
+      this.setState({
+        console: buttons[consoleIndex],
+        consoleIndex,
+        filteredGames
+      });
+    }
   };
 
   clearSearch = () => {
-    if (this.state.console) {
-      let filteredGames = this.filterByConsole(this.state.console);
-      this.setState({ search: '', filteredGames }, () => this.updateSearch);
-    } else {
-      this.setState({ search: '', filteredGames: [] });
-    }
+    this.setState({ search: '' }, () => {
+      if (this.state.console) {
+        let filteredGames = this.filterByConsole(this.state.console);
+        this.setState({ filteredGames });
+      } else {
+        this.setState({ filteredGames: [] });
+      }
+    });
   };
 
   filterBySearch = search => {
@@ -95,13 +113,13 @@ export default class Home extends Component {
     if (this.state.console) {
       let filteredGames = games.filter(
         game =>
-          game.title.toLowerCase().includes(search.toLowerCase()) &&
+          game.name.toLowerCase().includes(search.toLowerCase()) &&
           game.console === this.state.console
       );
       return filteredGames;
     } else {
       let filteredGames = games.filter(game =>
-        game.title.toLowerCase().includes(search.toLowerCase())
+        game.name.toLowerCase().includes(search.toLowerCase())
       );
       return filteredGames;
     }
@@ -110,10 +128,10 @@ export default class Home extends Component {
   filterByConsole = console => {
     let { games } = this.state;
     if (this.state.search) {
-      let filteredGames = games.filter(game =>
-        game.title
-          .toLowerCase()
-          .includes(this.state.search.toLowerCase() && game.console === console)
+      let filteredGames = games.filter(
+        game =>
+          game.name.toLowerCase().includes(this.state.search.toLowerCase()) &&
+          game.console === console
       );
       return filteredGames;
     } else {
@@ -122,24 +140,49 @@ export default class Home extends Component {
     }
   };
 
-  tradeRequest = () => {};
+  tradeRequest = e => {
+    e.preventDefault();
+    this.setState({ trade: true });
+  };
+
+  closeOverlay = e => {
+    this.setState({ trade: false });
+  };
 
   render() {
-    let { search, console, games, filteredGames } = this.state;
+    let { search, console, consoleIndex, games, filteredGames } = this.state;
     let buttons = ['XBox One', 'PS4', 'Switch'];
     let gamesToRender = search || console ? filteredGames : games;
+    let currentConsole = this.state.console === '' ? 'All' : this.state.console;
     return (
       <View style={{ height: '100%', backgroundColor: '#fffff0' }}>
+        <Trade visible={this.state.trade} close={this.closeOverlay} />
         <Header
           leftComponent={<Logo />}
-          centerComponent={{
-            text: 'GameSwap',
-            style: {
-              fontSize: 18,
-              fontWeight: '700',
-              color: '#7ed957'
-            }
-          }}
+          centerComponent={
+            <View style={{ display: 'flex', flexDirection: 'row' }}>
+              <Text
+                style={{
+                  fontSize: 18,
+                  fontWeight: '700',
+                  fontFamily: 'Verdana-Bold',
+                  color: '#7ed957'
+                }}
+              >
+                Game
+              </Text>
+              <Text
+                style={{
+                  fontSize: 18,
+                  fontWeight: '700',
+                  fontFamily: 'Verdana-Bold',
+                  color: '#000'
+                }}
+              >
+                Swap
+              </Text>
+            </View>
+          }
           rightComponent={{
             icon: 'account-circle',
             color: '#000'
@@ -156,6 +199,7 @@ export default class Home extends Component {
         <ButtonGroup
           buttons={buttons}
           onPress={this.updateConsole}
+          selectedIndex={consoleIndex}
           containerStyle={{
             backgroundColor: '#7ed957',
             borderColor: '#000',
@@ -163,15 +207,16 @@ export default class Home extends Component {
           }}
           innerBorderStyle={{ color: '#000' }}
           textStyle={{ color: '#000' }}
+          selectedButtonStyle={{ backgroundColor: '#000' }}
         />
-        <Text style={styles.text}>Available Games</Text>
+        <Text style={styles.text}>{currentConsole} Games</Text>
         <ScrollView>
           {gamesToRender.map((game, index) => (
             <Game
               key={index}
               index={index}
-              img={game.img}
-              title={game.title}
+              cover={game.cover}
+              name={game.name}
               tradeRequest={this.tradeRequest}
             />
           ))}

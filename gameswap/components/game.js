@@ -4,9 +4,9 @@ import { Button } from 'react-native-elements';
 
 const Game = props => (
   <View style={props.index === 0 ? styles.listItem1 : styles.listItem}>
-    <Image source={{ uri: props.img }} style={styles.image} />
+    <Image source={{ uri: props.cover }} style={styles.image} />
     <View style={styles.textView}>
-      <Text style={styles.text}>{props.title}</Text>
+      <Text style={styles.text}>{props.name}</Text>
     </View>
     <View style={styles.buttonView}>
       <Button
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
   image: { width: 70, height: 70, marginRight: 7 },
   textView: { width: '60%' },
-  text: { fontSize: 18, paddingTop: 25 },
+  text: { fontSize: 18, fontWeight: '500', paddingTop: 25 },
   buttonView: {
     width: '20%',
     height: 77,
