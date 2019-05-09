@@ -1,4 +1,4 @@
-const { Users, Games, Offers } = require('../database/model');
+const { Users, Games, Consoles, Offers} = require('../database/model');
 
 const controller = {
   addNewUser: (req, res) => {
@@ -32,15 +32,30 @@ const controller = {
     })
     .catch(err => res.send(err))
   },
-  updateGameOffers: (req, res) => {
-    
+  updateGameOffers: (req, res, data) => {
+    console.log('goodbye');
+    let game_id = req.body.id;
+    let offers = data.offers + 1;
+    console.log(game_id)
+    Games
+      .update({ offers }, { where: { game_id } })
+      .then(data => res.send(data))
+      .catch(err => res.send(err))
   },
   postNewOffer: (req, res) => {
     // check to see if game is in our database first
     let game_id = req.body.id;
     Games
     .findOne({ where: { game_id } })
-    .then((data) => res.send(data))
+    .then((data) => {
+      if (data) {
+        console.log('hello')
+        console.log(controller.updateGameOffers)
+        controller.updateGameOffers(req, res, data)
+      } else {
+        res.send(`Game id #${game_id} does not exist`);
+      }
+    })
     .catch(err => res.send(err))
       // if not, this.addNewGame
       // else, this.addExistingGame

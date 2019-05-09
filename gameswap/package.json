@@ -5,7 +5,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
-    "server-start": "node server/index.js",
+    "server-start": "nodemon server/index.js",
     "seed": "node database/seedData.js"
   },
   "dependencies": {

@@ -7,6 +7,6 @@ router.route('/users')
 
 router.route('/games')
 .get(controller.findGame)
-.post(controller.addNewGame)
+.post(controller.postNewOffer)
 
 module.exports = router;
