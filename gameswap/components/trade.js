@@ -14,7 +14,10 @@ export default class Trade extends Component {
     return (
       <Overlay
         isVisible={this.props.visible}
-        onBackdropPress={this.props.close}
+        onBackdropPress={() => {
+          this.props.close();
+          this.props.updateConsoleRequest('');
+        }}
         overlayBackgroundColor="#141414"
         children={
           <OverlayContent
