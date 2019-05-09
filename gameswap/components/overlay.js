@@ -17,12 +17,16 @@ const OverlayContent = props => (
         alignSelf: 'center',
         backgroundColor: '#000',
         borderWidth: 1,
-        borderColor: '#000',
+        borderColor: '#d3d3d3',
         width: '50%',
         marginTop: 7,
-        marginBottom: 7
+        marginBottom: 7,
+        borderRadius: 7
       }}
-      titleStyle={{ color: '#7ed957', fontWeight: '700' }}
+      titleStyle={{
+        color: '#7ed957',
+        fontWeight: '700'
+      }}
     />
   </View>
 );
@@ -30,9 +34,9 @@ const OverlayContent = props => (
 const styles = StyleSheet.create({
   text: {
     fontSize: 25,
+    color: '#d3d3d3',
     fontWeight: '700',
     textAlign: 'center',
-    textDecorationLine: 'underline',
     marginBottom: 7
   }
 });

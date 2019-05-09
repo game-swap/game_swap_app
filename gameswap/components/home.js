@@ -155,7 +155,7 @@ export default class Home extends Component {
     let gamesToRender = search || console ? filteredGames : games;
     let currentConsole = this.state.console === '' ? 'All' : this.state.console;
     return (
-      <View style={{ height: '100%', backgroundColor: '#fffff0' }}>
+      <View style={{ height: '100%', backgroundColor: '#141414' }}>
         <Trade visible={this.state.trade} close={this.closeOverlay} />
         <Header
           leftComponent={<Logo />}
@@ -187,10 +187,14 @@ export default class Home extends Component {
             icon: 'account-circle',
             color: '#000'
           }}
-          containerStyle={{ backgroundColor: '#fffff0' }}
+          containerStyle={{ backgroundColor: '#696969' }}
         />
         <SearchBar
-          containerStyle={{ backgroundColor: '#fffff0', marginTop: -1 }}
+          containerStyle={{
+            backgroundColor: '#141414',
+            marginTop: -1,
+            borderBottomColor: '#141414'
+          }}
           placeholder="Search for Games"
           onChangeText={this.updateSearch}
           onClear={this.clearSearch}
@@ -201,15 +205,15 @@ export default class Home extends Component {
           onPress={this.updateConsole}
           selectedIndex={consoleIndex}
           containerStyle={{
-            backgroundColor: '#7ed957',
-            borderColor: '#000',
-            marginBottom: 5
+            backgroundColor: '#000',
+            borderColor: '#d3d3d3',
+            marginBottom: 11
           }}
-          innerBorderStyle={{ color: '#000' }}
-          textStyle={{ color: '#000' }}
-          selectedButtonStyle={{ backgroundColor: '#000' }}
+          innerBorderStyle={{ color: '#d3d3d3' }}
+          textStyle={{ fontWeight: '700', color: '#7ed957' }}
+          selectedButtonStyle={{ backgroundColor: '#7ed957' }}
+          selectedTextStyle={{ fontWeight: '700', color: '#000' }}
         />
-        <Text style={styles.text}>{currentConsole} Games</Text>
         <ScrollView>
           {gamesToRender.map((game, index) => (
             <Game
@@ -226,13 +230,14 @@ export default class Home extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  text: {
-    fontSize: 25,
-    fontWeight: '700',
-    textAlign: 'center',
-    textDecorationLine: 'underline',
-    marginTop: 5,
-    marginBottom: 15
-  }
-});
+// const styles = StyleSheet.create({
+//   text: {
+//     fontSize: 25,
+//     color: '#d3d3d3',
+//     fontWeight: '700',
+//     textAlign: 'center',
+//     textDecorationLine: 'underline',
+//     marginTop: 5,
+//     marginBottom: 11
+//   }
+// });

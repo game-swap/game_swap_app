@@ -16,10 +16,15 @@ export default class Checkbox extends Component {
         title={this.props.name}
         checked={this.state.checked}
         onPress={() => this.setState({ checked: !this.state.checked })}
-        containerStyle={{ backgroundColor: '#7ed957' }}
-        textStyle={{ color: '#000' }}
-        uncheckedColor="#000"
-        checkedColor="#000"
+        containerStyle={{
+          backgroundColor: '#141414',
+          borderRadius: 7,
+          borderColor: '#7ed957',
+          borderWidth: 1.5
+        }}
+        textStyle={{ color: '#d3d3d3' }}
+        uncheckedColor="#d3d3d3"
+        checkedColor="#7ed957"
       />
     );
   }

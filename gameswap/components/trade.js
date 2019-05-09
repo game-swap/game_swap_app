@@ -16,10 +16,12 @@ export default class Trade extends Component {
       <Overlay
         isVisible={this.props.visible}
         onBackdropPress={this.props.close}
-        overlayBackgroundColor="#fffff0"
+        overlayBackgroundColor="#141414"
         children={<OverlayContent gamesOffered={this.state.gamesOffered} />}
         width="90%"
         height="auto"
+        borderRadius={11}
+        overlayStyle={{ borderWidth: 2, borderColor: '#d3d3d3' }}
       />
     );
   }
