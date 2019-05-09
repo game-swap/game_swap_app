@@ -13,8 +13,14 @@ export default class Checkbox extends Component {
     return (
       <CheckBox
         title={this.props.name}
-        checked={this.state.checked}
-        onPress={() => this.setState({ checked: !this.state.checked })}
+        checked={this.props.unique ? this.props.checked : this.state.checked}
+        onPress={() => {
+          if (this.props.unique) {
+            this.props.setCheckedConsole(this.props.name);
+          } else {
+            this.setState({ checked: !this.state.checked });
+          }
+        }}
         containerStyle={{
           backgroundColor: '#141414',
           borderRadius: 7,
