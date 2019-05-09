@@ -6,7 +6,9 @@ const Game = props => (
   <View style={props.index === 0 ? styles.listItem1 : styles.listItem}>
     <Image source={{ uri: props.cover }} style={styles.image} />
     <View style={styles.textView}>
-      <Text style={styles.text}>{props.name}</Text>
+      <Text style={styles.text} numberOfLines={1}>
+        {props.name}
+      </Text>
     </View>
     <View style={styles.buttonView}>
       <Button
@@ -48,7 +50,7 @@ const styles = StyleSheet.create({
     alignItems: 'stretch'
   },
   image: { width: 70, height: 70, marginRight: 11 },
-  textView: { width: '60%' },
+  textView: { width: '58%' },
   text: { color: '#d3d3d3', fontSize: 18, fontWeight: '700', paddingTop: 25 },
   buttonView: {
     width: '20%',

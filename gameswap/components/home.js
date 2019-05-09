@@ -12,6 +12,7 @@ export default class Home extends Component {
       search: '',
       console: '',
       consoleIndex: null,
+      consoleRequest: '',
       trade: false,
       games: [
         {
@@ -33,39 +34,38 @@ export default class Home extends Component {
           console: 'XBox One'
         },
         {
-          cover:
-            'https://images.g2a.com/newlayout/470x470/1x1x0/b99b28590aea/5bc9c521ae653a5fd7677389',
-          name: 'Red Dead Redemption 2',
+          cover: 'https://i.imgur.com/T50pVR6.jpg',
+          name: 'God of War',
           console: 'PS4'
         },
         {
           cover:
-            'https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Kingdom_Hearts_III_box_art.jpg/220px-Kingdom_Hearts_III_box_art.jpg',
-          name: 'Kingdom Hearts III',
+            'https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Spider-Man_PS4_cover.jpg/220px-Spider-Man_PS4_cover.jpg',
+          name: 'Spider-Man',
           console: 'PS4'
         },
         {
           cover:
-            'https://www.mobygames.com/images/covers/l/541579-anthem-legion-of-dawn-edition-playstation-4-front-cover.jpg',
-          name: 'Anthem',
+            'https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Sekiro_art.jpg/220px-Sekiro_art.jpg',
+          name: 'Sekiro: Shadows Die Twice',
           console: 'PS4'
         },
         {
           cover:
-            'https://images.g2a.com/newlayout/470x470/1x1x0/b99b28590aea/5bc9c521ae653a5fd7677389',
-          name: 'Red Dead Redemption 2',
+            'https://cdn02.nintendo-europe.com/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_SuperSmashBrosUltimate_02_image420w.jpg',
+          name: 'Super Smash Bros Ultimate',
           console: 'Switch'
         },
         {
           cover:
-            'https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Kingdom_Hearts_III_box_art.jpg/220px-Kingdom_Hearts_III_box_art.jpg',
-          name: 'Kingdom Hearts III',
+            'https://www.playersinitiative.com/wp-content/uploads/2017/03/The-Legend-of-Zelda-Breath-of-the-Wild-Cover-Art-Game.jpg',
+          name: 'The Legend of Zelda: Breath of the Wild',
           console: 'Switch'
         },
         {
           cover:
-            'https://www.mobygames.com/images/covers/l/541579-anthem-legion-of-dawn-edition-playstation-4-front-cover.jpg',
-          name: 'Anthem',
+            'https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/Mortal_Kombat_11_cover_art.png/220px-Mortal_Kombat_11_cover_art.png',
+          name: 'Mortal Kombat 11',
           console: 'Switch'
         }
       ],
@@ -85,20 +85,28 @@ export default class Home extends Component {
   updateConsole = consoleIndex => {
     let buttons = ['XBox One', 'PS4', 'Switch'];
     if (consoleIndex === this.state.consoleIndex) {
-      this.setState({ console: '', consoleIndex: null }, () => {
-        let filteredGames = this.state.search
-          ? this.filterBySearch(this.state.search)
-          : [];
-        this.setState({ filteredGames });
-      });
+      this.setState(
+        { console: '', consoleIndex: null, consoleRequest: '' },
+        () => {
+          let filteredGames = this.state.search
+            ? this.filterBySearch(this.state.search)
+            : [];
+          this.setState({ filteredGames });
+        }
+      );
     } else {
       let filteredGames = this.filterByConsole(buttons[consoleIndex]);
       this.setState({
         console: buttons[consoleIndex],
+        consoleRequest: buttons[consoleIndex],
         consoleIndex,
         filteredGames
       });
     }
+  };
+
+  updateConsoleRequest = consoleRequest => {
+    this.setState({ consoleRequest });
   };
 
   clearSearch = () => {
@@ -154,13 +162,24 @@ export default class Home extends Component {
   };
 
   render() {
-    let { search, console, consoleIndex, games, filteredGames } = this.state;
+    let {
+      search,
+      console,
+      consoleIndex,
+      consoleRequest,
+      games,
+      filteredGames
+    } = this.state;
     let buttons = ['XBox One', 'PS4', 'Switch'];
     let gamesToRender = search || console ? filteredGames : games;
-    let currentConsole = this.state.console === '' ? 'All' : this.state.console;
     return (
       <View style={{ height: '100%', backgroundColor: '#141414' }}>
-        <Trade visible={this.state.trade} close={this.closeOverlay} />
+        <Trade
+          visible={this.state.trade}
+          close={this.closeOverlay}
+          updateConsoleRequest={this.updateConsoleRequest}
+          console={consoleRequest}
+        />
         <Header
           leftComponent={<Logo />}
           centerComponent={
@@ -222,17 +241,33 @@ export default class Home extends Component {
           selectedButtonStyle={{ backgroundColor: '#7ed957' }}
           selectedTextStyle={{ fontWeight: '700', color: '#000' }}
         />
-        <ScrollView>
-          {gamesToRender.map((game, index) => (
-            <Game
-              key={index}
-              index={index}
-              cover={game.cover}
-              name={game.name}
-              tradeRequest={this.tradeRequest}
-            />
-          ))}
-        </ScrollView>
+        {gamesToRender.length ? (
+          <ScrollView>
+            {gamesToRender.map((game, index) => (
+              <Game
+                key={index}
+                index={index}
+                cover={game.cover}
+                name={game.name}
+                tradeRequest={this.tradeRequest}
+              />
+            ))}
+          </ScrollView>
+        ) : (
+          <Text
+            style={{
+              fontSize: 18,
+              fontWeight: '700',
+              fontFamily: 'Verdana-Bold',
+              color: '#d3d3d3',
+              display: 'flex',
+              alignSelf: 'center',
+              marginTop: 30
+            }}
+          >
+            No Results Found
+          </Text>
+        )}
       </View>
     );
   }
