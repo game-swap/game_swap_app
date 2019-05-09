@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
 import { CheckBox } from 'react-native-elements';
 
 export default class Checkbox extends Component {

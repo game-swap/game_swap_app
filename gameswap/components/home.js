@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, ScrollView, Text } from 'react-native';
+import { View, ScrollView, Text } from 'react-native';
 import { Header, SearchBar, ButtonGroup } from 'react-native-elements';
 import Logo from './logo.js';
 import Game from './game.js';
@@ -187,12 +187,16 @@ export default class Home extends Component {
             icon: 'account-circle',
             color: '#000'
           }}
-          containerStyle={{ backgroundColor: '#696969' }}
+          containerStyle={{
+            backgroundColor: '#696969',
+            borderBottomColor: '#696969'
+          }}
         />
         <SearchBar
           containerStyle={{
             backgroundColor: '#141414',
-            marginTop: -1,
+            marginTop: 5,
+            borderTopColor: '#141414',
             borderBottomColor: '#141414'
           }}
           placeholder="Search for Games"
@@ -229,15 +233,3 @@ export default class Home extends Component {
     );
   }
 }
-
-// const styles = StyleSheet.create({
-//   text: {
-//     fontSize: 25,
-//     color: '#d3d3d3',
-//     fontWeight: '700',
-//     textAlign: 'center',
-//     textDecorationLine: 'underline',
-//     marginTop: 5,
-//     marginBottom: 11
-//   }
-// });

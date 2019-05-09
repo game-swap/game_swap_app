@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
 import { Overlay } from 'react-native-elements';
 import OverlayContent from './overlay.js';
 
