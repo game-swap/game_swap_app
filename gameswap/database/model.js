@@ -19,6 +19,10 @@ const Users = sequelize.define('users', {
   },
   password: {
     type: Sequelize.STRING
+  },
+  tradeRequestsLeft: {
+    type: Sequelize.INTEGER,
+    allowNull: false
   }
 }, {
   timestamps: false
@@ -81,6 +85,9 @@ const Offers = sequelize.define('offers', {
   console_id: {
     type: Sequelize.INTEGER
   }
+}, {
+  timestamps: true,
+  updatedAt: false,
 });
 
 sequelize.sync()

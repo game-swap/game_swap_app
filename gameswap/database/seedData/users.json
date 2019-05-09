@@ -3,84 +3,98 @@
     "user_id": 1,
     "email": "saputra_albert@hotmail.com",
     "username": "albert",
-    "password": ""
+    "password": "",
+    "tradeRequestsLeft": 5
   },
   {
     "user_id": 2,
     "email": "liezelanne9@gmail.com",
     "username": "liezel",
-    "password": ""
+    "password": "",
+    "tradeRequestsLeft": 5
   },
   {
     "user_id": 3,
     "email": "hangtimee@gmail.com",
     "username": "jesse",
-    "password": ""
+    "password": "",
+    "tradeRequestsLeft": 5
   },
   {
     "user_id": 4,
     "email": "nathanaelmullins@gmail.com",
     "username": "nate",
-    "password": ""
+    "password": "",
+    "tradeRequestsLeft": 5
   },
   {
     "user_id": 5,
     "email": "jjjardine@gmail.com",
     "username": "whitejeff",
-    "password": ""
+    "password": "",
+    "tradeRequestsLeft": 5
   },
   {
     "user_id": 6,
     "email": "calvin.yao21@gmail.com",
     "username": "calvin",
-    "password": ""
+    "password": "",
+    "tradeRequestsLeft": 5
   },
   {
     "user_id": 7,
     "email": "charles.spinosa@gmail.com",
     "username": "charlie",
-    "password": ""
+    "password": "",
+    "tradeRequestsLeft": 5
   },
   {
     "user_id": 8,
     "email": "adam_reback@yahoo.com",
     "username": "adam",
-    "password": ""
+    "password": "",
+    "tradeRequestsLeft": 5
   },
   {
     "user_id": 9,
     "email": "ohannieho@gmail.com",
     "username": "annie",
-    "password": ""
+    "password": "",
+    "tradeRequestsLeft": 5
   },
   {
     "user_id": 10,
     "email": "akim2214@gmail.com",
     "username": "tony",
-    "password": ""
+    "password": "",
+    "tradeRequestsLeft": 5
   },
   {
     "user_id": 11,
     "email": "danielsu@protonmail.ch",
     "username": "daniel",
-    "password": ""
+    "password": "",
+    "tradeRequestsLeft": 5
   },
   {
     "user_id": 12,
     "email": "fred_david239@yahoo.com",
     "username": "fred",
-    "password": ""
+    "password": "",
+    "tradeRequestsLeft": 5
   },
   {
     "user_id": 13,
     "email": "tracyyu93@g.ucla.edu",
     "username": "tracy",
-    "password": ""
+    "password": "",
+    "tradeRequestsLeft": 5
   },
   {
     "user_id": 14,
     "email": "gujralu@yahoo.com",
     "username": "uttej",
-    "password": ""
+    "password": "",
+    "tradeRequestsLeft": 5
   }
 ]
