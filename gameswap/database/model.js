@@ -94,7 +94,7 @@ const Offers = sequelize.define('offers', {
 });
 
 sequelize.sync()
-.then(() => console.log('schemas have been synced'))
-.catch(err => console.log('unable to sync schemas: ', err))
+.then(() => console.log('✔ Schemas have been synced'))
+.catch(err => console.log('✘ Failure to sync schemas: ', err))
 
 module.exports = { Users, Games, Platforms, Offers };
