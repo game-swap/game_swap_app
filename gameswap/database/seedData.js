@@ -1,10 +1,10 @@
-const { Users, Games, Consoles, Offers } = require('../database/model');
+const { Users, Games, Platforms, Offers } = require('../database/model');
 const users = require('./seedData/users.json');
 const games = require('./seedData/games.json');
-const consoles = require('./seedData/consoles.json');
+const platforms = require('./seedData/platforms.json');
 const offers = require('./seedData/offers.json');
 
-const seedFunction = (users, games, consoles, offers) => {
+const seedFunction = (users, games, platforms, offers) => {
   Users
   .bulkCreate(users)
   .then(() => {
@@ -17,10 +17,10 @@ const seedFunction = (users, games, consoles, offers) => {
     console.log('Games Table Seeded');
   })
   .catch(err => console.log(err))
-  Consoles
-  .bulkCreate(consoles)
+  Platforms
+  .bulkCreate(platforms)
   .then(() => {
-    console.log('Consoles Table Seeded');
+    console.log('Platforms Table Seeded');
   })
   .catch(err => console.log(err))
   Offers
@@ -30,4 +30,4 @@ const seedFunction = (users, games, consoles, offers) => {
   })
 }
 
-seedFunction(users, games, consoles, offers);
+seedFunction(users, games, platforms, offers);

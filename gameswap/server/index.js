@@ -5,7 +5,7 @@ const path = require('path');
 
 const server = express();
 const router = require('./router');
-const port = 3000;
+const port = 3100;
 
 server.use(morgan('dev'));
 server.use(bodyParser.json());

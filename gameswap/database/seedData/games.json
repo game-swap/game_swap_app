@@ -3,7 +3,11 @@
     "game_id": 55190,
     "cover": "images.igdb.com/igdb/image/upload/t_thumb/co1ih2.jpg",
     "name": "Pikuniku",
-    "popularity": 143.7413353677489,
+    "platforms": [
+      6,
+      130
+    ],
+    "popularity": 146.0384246846043,
     "summary": "Pikuniku is an absurdly wonderful puzzle-exploration game that takes place in a strange but playful world where not everything is as happy as it seems. Help peculiar characters overcome struggles, uncover a deep state conspiracy, and start a fun little revolution in this delightful dystopian adventure!",
     "total_rating": 85.9,
     "offers": 1
@@ -12,7 +16,10 @@
     "game_id": 90101,
     "cover": "images.igdb.com/igdb/image/upload/t_thumb/co1il8.jpg",
     "name": "Super Smash Bros. Ultimate",
-    "popularity": 136.0357747063557,
+    "platforms": [
+      130
+    ],
+    "popularity": 135.5235229493929,
     "summary": "Legendary game worlds and fighters collide in the ultimate showdown—a new entry in the Super Smash Bros. series for the Nintendo Switch system! New fighters, like Inkling from the Splatoon series and Ridley from the Metroid series, make their Super Smash Bros. series debut alongside every Super Smash Bros. fighter in the series…EVER! Faster combat, new items, new attacks, new defensive options, and more will keep the battle raging whether you’re at home or on the go.",
     "total_rating": 89.211137823158,
     "offers": 1
@@ -21,7 +28,12 @@
     "game_id": 76882,
     "cover": "images.igdb.com/igdb/image/upload/t_thumb/co1j0g.jpg",
     "name": "Sekiro: Shadows Die Twice",
-    "popularity": 135.6008768812144,
+    "platforms": [
+      6,
+      48,
+      49
+    ],
+    "popularity": 124.8227881693276,
     "summary": "\"Carve your own clever path to vengeance in an all-new adventure from developer FromSoftware. \n \nExplore late 1500s Sengoku Japan, a brutal period of constant life and death conflict, as you come face to face with larger than life foes in a dark and twisted world. Unleash an arsenal of deadly prosthetic tools and powerful ninja abilities while you blend stealth, vertical traversal, and visceral head to head combat in a bloody confrontation. \n \nTake Revenge. Restore your honor. Kill Ingeniously.\"",
     "total_rating": 90.78329116255054,
     "offers": 1
@@ -30,7 +42,10 @@
     "game_id": 19560,
     "cover": "images.igdb.com/igdb/image/upload/t_thumb/cintjlnx6o8qyqtcnajl.jpg",
     "name": "God of War",
-    "popularity": 108.4197628098868,
+    "platforms": [
+      48
+    ],
+    "popularity": 109.099259512905,
     "summary": "\"It is a new beginning for Kratos. Living as a man, outside the shadow of the gods, he seeks solitude in the unfamiliar lands of Norse mythology. With new purpose and his son at his side, Kratos must fight for survival as powerful forces threaten to disrupt the new life he has created...\"",
     "total_rating": 96.36032959426664,
     "offers": 1
@@ -39,7 +54,12 @@
     "game_id": 1942,
     "cover": "images.igdb.com/igdb/image/upload/t_thumb/tri1c6vbydeosoqajwt1.jpg",
     "name": "The Witcher 3: Wild Hunt",
-    "popularity": 72.75814114830494,
+    "platforms": [
+      6,
+      48,
+      49
+    ],
+    "popularity": 74.37646706330523,
     "summary": "The Witcher: Wild Hunt is a story-driven, next-generation open world role-playing game set in a visually stunning fantasy universe full of meaningful choices and impactful consequences. In The Witcher you play as the professional monster hunter, Geralt of Rivia, tasked with finding a child of prophecy in a vast open world rich with merchant cities, viking pirate islands, dangerous mountain passes, and forgotten caverns to explore.",
     "total_rating": 94.03815824884114,
     "offers": 1
@@ -48,7 +68,17 @@
     "game_id": 26226,
     "cover": "images.igdb.com/igdb/image/upload/t_thumb/hybw5ksgnrhdm23wshqi.jpg",
     "name": "Celeste",
-    "popularity": 64.70452940012999,
+    "platforms": [
+      3,
+      6,
+      14,
+      45,
+      48,
+      49,
+      92,
+      130
+    ],
+    "popularity": 65.79977594604507,
     "summary": "A single-player platformer about climbing a mountain. Battle your inner demons and climb through more than 250 devious stages to reach the summit. It won\u0027t be easy.",
     "total_rating": 91.1714178646196,
     "offers": 1
@@ -57,7 +87,11 @@
     "game_id": 25076,
     "cover": "images.igdb.com/igdb/image/upload/t_thumb/yfk9f2lbo0r7slytuhra.jpg",
     "name": "Red Dead Redemption 2",
-    "popularity": 58.8414107437852,
+    "platforms": [
+      48,
+      49
+    ],
+    "popularity": 60.83676183138581,
     "summary": "Developed by the creators of Grand Theft Auto V and Red Dead Redemption, Red Dead Redemption 2 is an epic tale of life in America’s unforgiving heartland. The game\u0027s vast and atmospheric world will also provide the foundation for a brand new online multiplayer experience.",
     "total_rating": 95.42823242163794,
     "offers": 1
@@ -66,7 +100,14 @@
     "game_id": 12328,
     "cover": "images.igdb.com/igdb/image/upload/t_thumb/t7iby5lcbwdzn1irtu8p.jpg",
     "name": "Fate/stay night",
-    "popularity": 54.77094176485547,
+    "platforms": [
+      6,
+      8,
+      34,
+      39,
+      46
+    ],
+    "popularity": 54.49243249237278,
     "summary": "Fate/stay night is a Japanese visual novel, which was originally released as an adult game. A version of Fate/stay night rated for ages 15 and up titled Fate/stay night Réalta Nua was released later. Fate/stay night \u0027​s gameplay requires little interaction from the player as most of the game\u0027s duration is spent on reading the text that appears, representing either dialogue between the characters or the inner thoughts of the protagonist. Often, players will come to a \"decision point\" where they are given the chance to choose from options displayed on the screen, typically two to three at a time. There are three main plot lines that the player will have the chance to experience, one for each of the heroines in the story. To view all three plot lines, the player will have to replay the game multiple times and choose different choices during the decision points to progress the plot in an alternate direction.",
     "total_rating": 91.5589731772203,
     "offers": 1
@@ -75,34 +116,39 @@
     "game_id": 1020,
     "cover": "images.igdb.com/igdb/image/upload/t_thumb/t0zqmqhdcxppyol3mtlg.jpg",
     "name": "Grand Theft Auto V",
-    "popularity": 54.05753466723154,
+    "platforms": [
+      6,
+      9,
+      12,
+      48,
+      49
+    ],
+    "popularity": 53.19337984562485,
     "summary": "The biggest, most dynamic and most diverse open world ever created, Grand Theft Auto V blends storytelling and gameplay in new ways as players repeatedly jump in and out of the lives of the game’s three lead characters, playing all sides of the game’s interwoven story.",
-    "total_rating": 93.72555531945905,
+    "total_rating": 93.72550636462265,
     "offers": 1
   },
   {
     "game_id": 9927,
     "cover": "images.igdb.com/igdb/image/upload/t_thumb/co1iea.jpg",
     "name": "Persona 5",
-    "popularity": 50.5783520661016,
+    "platforms": [
+      9,
+      48
+    ],
+    "popularity": 51.44632110602235,
     "summary": "Persona 5, a turn-based JRPG with visual novel elements, follows a high school student with a criminal record for a crime he didn\u0027t commit. Soon he meets several characters who share similar fates to him, and discovers a metaphysical realm which allows him and his friends to channel their pent-up frustrations into becoming a group of vigilantes reveling in aesthetics and rebellion while fighting corruption.",
     "total_rating": 94.29424674526561,
-    "offers": 1
-  },
-  {
-    "game_id": 5550,
-    "cover": "//images.igdb.com/igdb/image/upload/t_thumb/yp8d4h6xwje27nl5nfwe.jpg",
-    "name": "Tactics Ogre: Let Us Cling Together",
-    "popularity": 48.07656748890961,
-    "summary": "Tactics Ogre is a 3D isometric tactical role-playing game. The player starts out with a band of troops, builds a small army and fights many battles with choices to make in between, that will determine which one of the eight possible endings will be reached in a non-linear storyline. The player has the option to recruit characters, control individual equipment of each character, with over six male character classes, six female character classes, three demi-human classes, and more. It is also possible to train at safe locations to prepare the army before the next battle or storyline advancement.",
-    "total_rating": 94.0314681108519,
     "offers": 1
   },
   {
     "game_id": 11156,
     "cover": "images.igdb.com/igdb/image/upload/t_thumb/co1izx.jpg",
     "name": "Horizon Zero Dawn",
-    "popularity": 43.61998686384172,
+    "platforms": [
+      48
+    ],
+    "popularity": 44.67646849006264,
     "summary": "Horizon Zero Dawn, an exhilarating new action role playing game exclusively for the PlayStation 4 system, developed by the award winning Guerrilla Games, creatos of PlayStation\u0027s venerated Killzone franchise. As Horizon Zero Dawn\u0027s main protagonist Aloy, a skilled hunter, explore a vibrant and lush world inhabited by mysterious mechanized creatures.",
     "total_rating": 91.4090123774798,
     "offers": 1
@@ -111,18 +157,579 @@
     "game_id": 7346,
     "cover": "images.igdb.com/igdb/image/upload/t_thumb/mievpzb9rbzzenmznvnr.jpg",
     "name": "The Legend of Zelda: Breath of the Wild",
-    "popularity": 40.14080426271179,
+    "platforms": [
+      41,
+      130
+    ],
+    "popularity": 38.9985275863545,
     "summary": "Step into a world of discovery, exploration and adventure in The Legend of Zelda: Breath of the Wild, a boundary-breaking new game in the acclaimed series. Travel across fields, through forests and to mountain peaks as you discover what has become of the ruined kingdom of Hyrule in this stunning open-air adventure.",
     "total_rating": 95.4076585025791,
     "offers": 1
   },
   {
+    "game_id": 732,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/bu6konltnmbsnpr4edc1.jpg",
+    "name": "Grand Theft Auto: San Andreas",
+    "platforms": [
+      6,
+      8,
+      9,
+      11,
+      12,
+      14,
+      34,
+      36,
+      39,
+      48
+    ],
+    "popularity": 33.32058668264635,
+    "summary": "Returning after his mother\u0027s murder to the semi-fictional city of Los Santos (based on Los Angeles), Carl Johnson, a former gang banger, must take back the streets for his family and friends by gaining respect and once again gaining control over the city. However, a story filled with plots, lies and corruption will lead him to trudge the entire state of San Andreas (based on California and Nevada) to get revenge.",
+    "total_rating": 91.9597516098663,
+    "offers": 1
+  },
+  {
     "game_id": 1009,
-    "cover": "//images.igdb.com/igdb/image/upload/t_thumb/cceu88e8hf0gr5jpai4n.jpg",
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/cceu88e8hf0gr5jpai4n.jpg",
     "name": "The Last of Us",
-    "popularity": 35.35692818615813,
+    "platforms": [
+      9
+    ],
+    "popularity": 32.88382199774573,
     "summary": "A third person shooter/stealth/survival hybrid, in which twenty years after the outbreak of a parasitic fungus which takes over the neural functions of humans, Joel, a Texan with a tragic familial past, finds himself responsible with smuggling a fourteen year old girl named Ellie to a militia group called the Fireflies, while avoiding strict and deadly authorities, infected fungal hosts and other violent survivors.",
     "total_rating": 92.9328108529542,
     "offers": 1
+  },
+  {
+    "game_id": 7334,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/co1hsh.jpg",
+    "name": "Bloodborne",
+    "platforms": [
+      48
+    ],
+    "popularity": 31.35514560059353,
+    "summary": "Introducing Bloodborne, the latest Action RPG from renowned Japanese developer FromSoftware, makers of the hit Dark Souls series, coming exclusively to PlayStation 4. \n\nFace your fears as you search for answers in the ancient city of Yharnam, now cursed with a strange endemic illness spreading through the streets like wildfire. Danger, death and madness lurk around every corner of this dark and horrific world, and you must discover its darkest secrets in order to survive.",
+    "total_rating": 90.82691869656745,
+    "offers": 1
+  },
+  {
+    "game_id": 11208,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/qhok1pi6egmfizjjii7r.jpg",
+    "name": "NieR: Automata",
+    "platforms": [
+      6,
+      48
+    ],
+    "popularity": 30.6999985732426,
+    "summary": "NieR: Automata is an upcoming action role-playing game developed by PlatinumGames and published by Square Enix for the PlayStation 4. \n \nThe game is set in the same universe as NieR, a spin-off of the Drakengard series, and takes place several thousand years after the events of that game. Humanity has fled to the moon to escape an invading machine army from another world. Combat androids called YoRHa remain on the planet to fight in a proxy war against the invaders.",
+    "total_rating": 90.09180393275986,
+    "offers": 1
+  },
+  {
+    "game_id": 72,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/w6kusdugzlssi3yqcbwl.jpg",
+    "name": "Portal 2",
+    "platforms": [
+      6,
+      9,
+      12,
+      14
+    ],
+    "popularity": 28.29779280628915,
+    "summary": "Sequel to the acclaimed Portal (2007), Portal 2 pits the protagonist of the original game, Chell, and her new robot friend, Wheatley, against more puzzles conceived by GLaDOS, an A.I. with the sole purpose of testing the Portal Gun\u0027s mechanics and taking revenge on Chell for the events of Portal. As a result of several interactions and revelations, Chell once again pushes to escape Aperture Science Labs.",
+    "total_rating": 91.8554867224085,
+    "offers": 1
+  },
+  {
+    "game_id": 3568,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/im1mjsvohekatmhjcitc.jpg",
+    "name": "Ogre Battle 64: Person of Lordly Caliber",
+    "platforms": [
+      4,
+      5,
+      47
+    ],
+    "popularity": 27.96366515875701,
+    "summary": "\"Ogre Battle 64: Person of Lordly Caliber is a tactical RPG for the Nintendo 64.\n\nFeaturing a gripping storyline with multiple possible endings, and a genre-defining character class system, this strategic epic has rightly retained its place in the hearts of tactical RPG fans for over a decade.\n\nThe game tells the story of Magnus Gallant, a recently graduated officer of the Palatinean Army who is assigned to the troubled southern region of his native land. There he witnesses the plight of the lower classes – the victims of a tyrannical ruling elite whose only thought is for the preservation of their own lofty status. With civil war brewing, Magnus is faced with a terrible choice: to betray his own noble origins in the name of liberty, or turn a blind eye to the evils of his rotten society.\"",
+    "total_rating": 98.52384184793699,
+    "offers": 1
+  },
+  {
+    "game_id": 115281,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/co1jat.jpg",
+    "name": "BOX BOY! + BOX GIRL!",
+    "platforms": [
+      130
+    ],
+    "popularity": 27.86102812138852,
+    "summary": "\"The fan-favorite puzzle series is back for the first time on Nintendo Switch with a brand new game! In addition to 270 new levels, two players can work as a team to solve puzzles in a new co-op mode. As a bonus, players who complete the game can access a new adventure starring Qudy.\"",
+    "total_rating": 88.75,
+    "offers": 1
+  },
+  {
+    "game_id": 19085,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/lremfgv4upwlo0e6ilps.jpg",
+    "name": "Shadow Tactics: Blades of the Shogun",
+    "platforms": [
+      3,
+      6,
+      14,
+      48,
+      49
+    ],
+    "popularity": 27.31131842104515,
+    "summary": "Skillfully hide from and sneak past the enemies fields of view, take their formations apart and hide their bodies to cover your tracks. Quick Save will enable you to execute your plans perfectly. Tactically plan actions for your whole team and execute them all at once. Make use of the vertical gameplay and jump from roof to roof to silently kill your foes from above.",
+    "total_rating": 91.64143221195121,
+    "offers": 1
+  },
+  {
+    "game_id": 1221,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/kawgvnfqvcmjixnnr53i.jpg",
+    "name": "Kingdom Hearts II",
+    "platforms": [
+      8
+    ],
+    "popularity": 22.83823424503132,
+    "summary": "Kingdom Hearts II is an action role-playing game, and the primary entry to the series since the 2002 Disney Interactive and Square collaboration; Kingdom Hearts.\nSora, Donald, and Goofy wake from their slumber and prepare for the journey ahead. They must face Organization XIII, protect the Keyblade’s power, and resume their search for the special people they have lost.\nThe game\u0027s setting is a collection of various levels (referred to in-game as \"worlds\") that the player progresses through. As in the first game, it II allows the player to travel to locales from various Disney works, along with original worlds specifically created for the series.",
+    "total_rating": 90.51108160997205,
+    "offers": 1
+  },
+  {
+    "game_id": 26758,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/u4m45xwqdq8cuu4b9elq.jpg",
+    "name": "Super Mario Odyssey",
+    "platforms": [
+      130
+    ],
+    "popularity": 22.83823424503132,
+    "summary": "The game has Mario leaving the Mushroom Kingdom to reach an unknown open world-like setting, like Super Mario 64 and Super Mario Sunshine.",
+    "total_rating": 94.24219429861886,
+    "offers": 1
+  },
+  {
+    "game_id": 233,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/obcjdcsaq2ndxqi7zqdf.jpg",
+    "name": "Half-Life 2",
+    "platforms": [
+      3,
+      6,
+      9,
+      11,
+      12,
+      14
+    ],
+    "popularity": 21.30955784787913,
+    "summary": "Half-Life 2 (stylized as HλLF-LIFE²), the sequel to Half-Life, is a first-person shooter video game and part of the Half-Life series. Developed by Valve Corporation, it was initially released on November 16, 2004, following a protracted five-year, $40 million development cycle, during which a substantial part of the project was leaked and distributed on the Internet.",
+    "total_rating": 91.0792800987409,
+    "offers": 1
+  },
+  {
+    "game_id": 481,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/ttdgrvy7jzu6spvprono.jpg",
+    "name": "Silent Hill 2",
+    "platforms": [
+      6,
+      8,
+      11
+    ],
+    "popularity": 20.8727931629785,
+    "summary": "The second entry in the Silent Hill franchise, Silent Hill 2 is a third-person survival horror title with exploration and puzzle-solving elements and a heavy emphasis on psychological storytelling, which follows James Sunderland, who receives a letter, seemingly from his three-years-deceased wife Mary, in which he is beckoned to the fog-ridden town of Silent Hill, at the same time as numerous other troubled people.",
+    "total_rating": 92.00342656670486,
+    "offers": 1
+  },
+  {
+    "game_id": 1074,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/scutr4p9gytl4txb2soy.jpg",
+    "name": "Super Mario 64",
+    "platforms": [
+      4,
+      5,
+      41,
+      47
+    ],
+    "popularity": 20.21764613562756,
+    "summary": "Mario is invited by Princess Peach to her castle, but once he arrives he finds out that Bowser has kidnapped her. Mario has to overcome many challenges and collect Power Stars hidden in the castle\u0027s paintings and walls to defeat Bowser and rescue Peach in this seminal 3D platformer.",
+    "total_rating": 89.5045720948622,
+    "offers": 1
+  },
+  {
+    "game_id": 7194,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/kuobapqvdaploca1arlj.jpg",
+    "name": "Steins;Gate",
+    "platforms": [
+      6,
+      9,
+      12,
+      34,
+      38,
+      39,
+      46,
+      48
+    ],
+    "popularity": 20.13550430621465,
+    "summary": "Steins;Gate is a Japanese visual novel developed by 5pb. and Nitroplus. It is the second game in the Science Adventure series following Chaos;Head. The game is described by the development team as a \"hypothetical science ADV\" and explores time and time travel in 2010 Akihabara. The gameplay follows non-linear plot lines which offer branching scenarios with courses of interaction.",
+    "total_rating": 89.4290021146725,
+    "offers": 1
+  },
+  {
+    "game_id": 3349,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/v9arzbugtavobuncwv7v.jpg",
+    "name": "Paper Mario: The Thousand-Year Door",
+    "platforms": [
+      21
+    ],
+    "popularity": 19.99926379317725,
+    "summary": "What Sleeps Behind the Door? \n \nTime passes, the pages turn…and a new chapter unfolds in an unfamiliar land! Get ready for a two-dimensional role-playing adventure for the ages as Mario returns to paper form to discover a mystery that sleeps behind an ancient, legendary portal called the Thousand-Year Door. The quest is long, the dangers many, and this time, Mario will have to make full use of his papery qualities just to survive. \n \nTake to the stage! Impressing the crowd builds power for super attacks, but don’t disappoint the audience, or you’ll pay! \n \nNo need to go it alone! You’ll need to rely on sidekicks to survive, and even enemies have roles to play… \n \nDon’t fold under pressure! Fold into a paper airplane, turn sideways to slip through cracks, and much more. \n \nStay on your toes! Stamp foes, swing your hammer, and use timely button presses to do damage!",
+    "total_rating": 91.65846990903731,
+    "offers": 1
+  },
+  {
+    "game_id": 18182,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/voliwenox8e3g85x0fhl.jpg",
+    "name": "Momodora: Reverie Under the Moonlight",
+    "platforms": [
+      6,
+      48,
+      49,
+      130
+    ],
+    "popularity": 19.78743748410613,
+    "summary": "\"Momodora: Reverie Under the Moonlight is a sidescrolling platformer, and is the fourth installment of the Momodora series. Focusing on gameplay, melee combos, dodge mechanics, travel forwards in the search to save everyone. With your trusty leave, find a variety of items and spells to use to assist you on your journey.\"\n\nThis game is a prequel to the previous Momodora games.",
+    "total_rating": 87.4990305335827,
+    "offers": 1
+  },
+  {
+    "game_id": 379,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/v06oxn5nwwrrjoxgnlhk.jpg",
+    "name": "Metal Gear Solid 3: Snake Eater",
+    "platforms": [
+      8,
+      9,
+      12,
+      37,
+      46
+    ],
+    "popularity": 19.78088145072693,
+    "summary": "A stealth action/survival game and prequel to Metal Gear Solid 1 (1998) and 2 (2001), MGS3 follows Naked Snake as he trudges through rain forests and swamps in order to clear the name of the American government of suspicion at detonating a nuclear missile within Soviet soil by dispatching the organization behind the act, in a story of shifting allegiances, deception, warfare, mentorship and sexuality.",
+    "total_rating": 89.23051689836485,
+    "offers": 1
+  },
+  {
+    "game_id": 22439,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/whmf3el1gv3ujreysrrh.jpg",
+    "name": "The Witcher 3: Wild Hunt - Game of the Year Edition",
+    "platforms": [
+      6,
+      48,
+      49
+    ],
+    "popularity": 19.56249910827662,
+    "summary": "Become a professional monster slayer and embark on an adventure of epic proportions! Upon its release, The Witcher 3: Wild Hunt became an instant classic, claiming over 250 Game of the Year awards. Now you can enjoy this huge, over 100-hour long, open-world adventure along with both its story-driven expansions worth an extra 50 hours of gameplay. This edition includes all additional content - new weapons, armor, companion outfits, new game mode and side quests.",
+    "total_rating": 97.9904369357634,
+    "offers": 1
+  },
+  {
+    "game_id": 7331,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/zvkdiv2dze8tcit6bzza.jpg",
+    "name": "Uncharted 4: A Thief\u0027s End",
+    "platforms": [
+      48
+    ],
+    "popularity": 19.125734423376,
+    "summary": "Several years after his last adventure, retired fortune hunter, Nathan Drake, is forced back into the world of thieves. With the stakes much more personal, Drake embarks on a globe-trotting journey in pursuit of a historical conspiracy behind a fabled pirate treasure. His greatest adventure will test his physical limits, his resolve, and ultimately what he\u0027s willing to sacrifice to save the ones he loves.",
+    "total_rating": 92.63508398732945,
+    "offers": 1
+  },
+  {
+    "game_id": 11800,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/dmjfwavyq2fwgwyr80hn.jpg",
+    "name": "Divinity: Original Sin II",
+    "platforms": [
+      6,
+      48,
+      49
+    ],
+    "popularity": 18.83081083079093,
+    "summary": "Divinity: Original Sin II is a single- and multiplayer top-down, party-based role-playing game with pen \u0026 paper RPG-like levels of freedom.It features turn-based combat, a strong focus on systematic gameplay and a well-grounded narrative. \n \nDivinity: Original Sin 2 is the sequel to the critically acclaimed Divinity: Original Sin, winner of over 150 Game of the Year awards and nominations.",
+    "total_rating": 91.66346325295905,
+    "offers": 1
+  },
+  {
+    "game_id": 974,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/yj6gl8pylzyvskqki3sy.jpg",
+    "name": "Resident Evil 4",
+    "platforms": [
+      5,
+      6,
+      8,
+      9,
+      12,
+      21,
+      39,
+      48,
+      49,
+      130
+    ],
+    "popularity": 18.47058739602506,
+    "summary": "An atmospheric survival horror game with inventive third-person shooting mechanics set six years after the events of Resident Evil 2 (1998), Resident Evil 4 follows Leon S. Kennedy, a former Raccoon City police officer sent to Spain on a secret mission to retrieve the president\u0027s daughter from the hands of a mysterious cult. During his mission, he is forced to battle a mind-controlling parasite and its dehumanized hosts.",
+    "total_rating": 86.68394620743496,
+    "offers": 1
+  },
+  {
+    "game_id": 231,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/twbyn9lpdljjxedxudn5.jpg",
+    "name": "Half-Life",
+    "platforms": [
+      3,
+      6,
+      8,
+      14
+    ],
+    "popularity": 17.81544036867411,
+    "summary": "Dr. Gordon Freeman doesn\u0027t speak, but he\u0027s got a helluva story to tell. This first-person roller-coaster initiated a new era in the history of action games by combining engrossing gameplay, upgraded graphics, ingenious level design and a revolutionary story that may not be all that it seems, told not through cutscenes, but through the visual environment.",
+    "total_rating": 85.15852884626125,
+    "offers": 1
+  },
+  {
+    "game_id": 17783,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/efukb4yrq64r659oujwa.jpg",
+    "name": "Assassin\u0027s Creed: Origins - The Curse of the Pharaohs",
+    "platforms": [
+      6,
+      48,
+      49
+    ],
+    "popularity": 17.74356626793782,
+    "summary": "The Curse of the Pharaohs is a downloadable content expansion package for Assassin\u0027s Creed: Origins, set to be released in March 2018. It is to be the second out of two expansion packs for the game, alongside The Hidden Ones. \n \nThe Curse of the Pharaohs sees Bayek travel to Thebes and the Valley of the Kings, where he will uncover a mystery that will develop into a \"living nightmare\" for Bayek. Further exploring Egyptian mythology, the expansion pits Bayek against mythical beasts and dead pharaohs.",
+    "total_rating": 92.83228042348105,
+    "offers": 1
+  },
+  {
+    "game_id": 1029,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/gx4b9es5tn3pqhqnqeuu.jpg",
+    "name": "The Legend of Zelda: Ocarina of Time",
+    "platforms": [
+      4,
+      5,
+      21,
+      41,
+      47
+    ],
+    "popularity": 17.37867568377349,
+    "summary": "The Legend of Zelda: Ocarina of Time reveals the genesis of the fantasy land of Hyrule, the origin of the Triforce, and the tale of the first exploits of Princess Zelda and the heroic adventurer Link. Vibrant, real-time 3-D graphics transport you into the fantasy world of Hyrule. Your quest takes you through dense forests and across wind-whipped deserts. Swim raging rivers, climb treacherous mountains, dash on horseback across rolling hills, and delve into dungeons full of creatures that fight to the finish to put an end to your adventures. With immersive graphics, a sweeping story line, swashbuckling adventure, mind-bending puzzles, and a touch of humor, The Legend of Zelda: Ocarina of Time is one of Nintendo\u0027s most epic challenges ever.",
+    "total_rating": 92.4448694989499,
+    "offers": 1
+  },
+  {
+    "game_id": 74,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/q8shkfzxblrn22o9dvra.jpg",
+    "name": "Mass Effect 2",
+    "platforms": [
+      6,
+      9,
+      12
+    ],
+    "popularity": 17.16029334132318,
+    "summary": "Are you prepared to lose everything to save the galaxy? You\u0027ll need to be, Commander Shephard. It\u0027s time to bring together your greatest allies and recruit the galaxy\u0027s fighting elite to continue the resistance against the invading Reapers. So steel yourself, because this is an astronomical mission where sacrifices must be made. You\u0027ll face tougher choices and new, deadlier enemies. Arm yourself and prepare for an unforgettable intergalactic adventure. \n \nGame Features: \n \nShift the fight in your favour. Equip yourself with powerful new weapons almost instantly thanks to a new inventory system. Plus, an improved health regeneration system means you\u0027ll spend less time hunting for restorative items. \n \nMake every decision matter. Divisive crew members are just the tip of the iceberg, Commander, because you\u0027ll also be tasked with issues of intergalactic diplomacy. And time\u0027s a wastin\u0027 so don\u0027t be afraid to use new prompt-based actions that let you interrupt conversations, even if they could alter the fate of your crew...and the galaxy. \n \nForge new alliances, carefully. You\u0027ll fight alongside some of your most trustworthy crew members, but you\u0027ll also get the opportunity to recruit new talent. Just choose your new partners with care because the fate of the galaxy rests on your shoulders, Commander.",
+    "total_rating": 94.0677312363563,
+    "offers": 1
+  },
+  {
+    "game_id": 1026,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/f9jqwcudxcicbqgzx8tf.jpg",
+    "name": "The Legend of Zelda: A Link to the Past",
+    "platforms": [
+      5,
+      19,
+      24,
+      37,
+      41,
+      47,
+      58
+    ],
+    "popularity": 16.94191099887286,
+    "summary": "A top-down action/adventure title in which Link, a blacksmith\u0027s nephew living in the fantastical land of Hyrule, must free the land from the evildoings of Ganon by taking up the mythical Master Sword and collecting the three Triforces in order to free the Seven Maidens, including the princess of Hyrule, Zelda, from the dungeons and castles of the Dark World.",
+    "total_rating": 96.39563961603281,
+    "offers": 1
+  },
+  {
+    "game_id": 27979,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/swd0sbumi87dsg8lfat0.jpg",
+    "name": "Kingdom Hearts HD 1.5 + 2.5 ReMIX",
+    "platforms": [
+      48
+    ],
+    "popularity": 16.87377061765534,
+    "summary": "Kingdom Hearts HD 1.5 + 2.5 Remix includes both remixes in the title as well as the Kingdom Heart games: Re:Chain of Memories, 358/2 Days, Birth by Sleep Final MIX, and Re:coded. \n \n\"KINGDOM HEARTS HD 1.5 + 2.5 ReMIX is a compliation of six magical KINGDOM HEARTS experiences. \nSee how Sora\u0027s adventure and the Dark Seeker Saga against Xehanort begins! \n \nKINGDOM HEARTS HD 1.5 + 2.5 ReMIX includes: \n- KINGDOM HEARTS FINAL MIX \n- KINGDOM HEARTS Re:Chain of Memories \n- KINGDOM HEARTS 358/2 Days (HD remastered cinematics) \n- KINGDOM HEARTS II FINAL MIX \n- KINGDOM HEARTS Birth by Sleep FINAL MIX \n- KINGDOM HEARTS Re:coded (HD remastered cinematics)\"",
+    "total_rating": 91.85257615379146,
+    "offers": 1
+  },
+  {
+    "game_id": 434,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/co1i3e.jpg",
+    "name": "Red Dead Redemption",
+    "platforms": [
+      9,
+      12
+    ],
+    "popularity": 16.72352865642255,
+    "summary": "A modern-day Western epic, Red Dead Redemption takes John Marston, a relic from the fast-closing time of the gunslinger, through an open-world filled with wildlife, mini games and shootouts. Marston sets out to hunt down his old gang mates for the government, who have taken away his family, and meets many characters emblematic of the Wild West, heroism and the new civilization along his journey.",
+    "total_rating": 91.3590640065419,
+    "offers": 1
+  },
+  {
+    "game_id": 42931,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/co1jk7.jpg",
+    "name": "Bloodborne: Game Of The Year Edition",
+    "platforms": [
+      48
+    ],
+    "popularity": 16.4388727925141,
+    "summary": "With new story details, learn the tale of hunters who once made Yharnam their hunting grounds, meet new NPCs, and discover another side of the history and world of Bloodborne. Includes: \nThe Original Bloodborne Experience / Bloodborne: The Old Hunters Expansion / Bloodborne: The Old Hunters",
+    "total_rating": 98.50224979787241,
+    "offers": 1
+  },
+  {
+    "game_id": 7386,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/q6lzbmfpdgniy7el809u.jpg",
+    "name": "The Talos Principle",
+    "platforms": [
+      3,
+      6,
+      14,
+      34,
+      39,
+      48,
+      49
+    ],
+    "popularity": 16.22142387994347,
+    "summary": "The Talos Principle is a philosophical first-person puzzle game from Croteam, the creators of the legendary Serious Sam series, written by Tom Jubert (FTL, The Swapper) and Jonas Kyratzes (The Sea Will Claim Everything).",
+    "total_rating": 88.67984370478925,
+    "offers": 1
+  },
+  {
+    "game_id": 41,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/xxzoi1qzbwz1r7q6q96g.jpg",
+    "name": "Deus Ex",
+    "platforms": [
+      6,
+      8,
+      14,
+      45
+    ],
+    "popularity": 16.06838162907161,
+    "summary": "In this philosophical first-person Western RPG set in a dystopian 2052, JC Denton, a nano-augmented agent for the anti-terrorist organization UNATCO, is tasked with stopping the invasion of Liberty Island by the terrorist group NSF. As events unfold, Denton finds that he plays a large part in a world-spanning conspiracy which forces him to ponder his allegiances, beliefs, morality, and view of right and wrong.",
+    "total_rating": 90.479053237929,
+    "offers": 1
+  },
+  {
+    "game_id": 1068,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/ogguvec9vhrsml4uxqrg.jpg",
+    "name": "Super Mario Bros. 3",
+    "platforms": [
+      5,
+      18,
+      19,
+      24,
+      37,
+      41,
+      47
+    ],
+    "popularity": 16.06838162907161,
+    "summary": "Super Mario Bros. 3 is a platform video game for the Nintendo Entertainment System (NES) video game console. Mario and Luigi embark on a quest to save Princess Toadstool and the rulers of seven different kingdoms from the antagonist Bowser and his children, the Koopalings. The player, as Mario or Luigi, is able to defeat enemies by stomping them or using items that bestow magical powers. Mario and Luigi are given a wider range of abilities than in previous Super Mario games, including flying or sliding down slopes. In addition, Super Mario Bros. 3 introduces numerous elements, such as new enemy characters and the use of a world map to transition between levels, that have reappeared in or have influenced subsequent Mario games.",
+    "total_rating": 90.18152669814681,
+    "offers": 1
+  },
+  {
+    "game_id": 1105,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/xfwca30qhflousnzg1vz.jpg",
+    "name": "Metroid Prime",
+    "platforms": [
+      21
+    ],
+    "popularity": 15.19485225927036,
+    "summary": "Everyone\u0027s favorite heroine, Samus Aran, is back! Packed to the gills with exploration, creative power-ups, and wicked enemies, Metroid Prime is a first-person adventure worthy of the Metroid stamp. An action-packed adventure set in the first-person perspective, Metroid Prime takes place just after the events in the original Metroid (NES). It has lead character Samus Aran, a bounty hunter by trade, chasing down the evil Space Pirates. Their intention is to use a genetic mutagen called Phazon to create a super army and take over the universe. While the installments in the series before have never been home to deeply involving storylines, Metroid Prime breaks the shell to offer up one of the most intriguing and read-worthy sagas yet. Developed by Texas-based Retro Studios. Metroid Prime brings all of the elements of the acclaimed franchise into a massive 3D arena.",
+    "total_rating": 94.06679319477331,
+    "offers": 1
+  },
+  {
+    "game_id": 2207,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/ktwvudh3lndkhvccdyxg.jpg",
+    "name": "Shadow of the Colossus",
+    "platforms": [
+      8,
+      9,
+      45
+    ],
+    "popularity": 14.97646991682004,
+    "summary": "An open-world action/adventure game in which a young wanderer, along with a stolen magical sword and his steed companion, trespasses a cursed land, makes a deal with an ancient being to bring a sacrificial victim back to life, and sets off to fulfill his end of the bargain, which involves tracking down and infiltrating the abodes of sixteen colossi and sacrificing them to achieve his goal.",
+    "total_rating": 89.39241284611859,
+    "offers": 1
+  },
+  {
+    "game_id": 427,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/idzdf1alxvetz3ow2ugy.jpg",
+    "name": "Final Fantasy VII",
+    "platforms": [
+      6,
+      7,
+      39,
+      45,
+      48,
+      49,
+      130
+    ],
+    "popularity": 13.88455820456848,
+    "summary": "Set in a dystopian world, Final Fantasy VII\u0027s story centers on mercenary Cloud Strife who joins with several others to stop the megacorporation Shinra, which is draining the life of the planet to use as an energy source. As the story progresses, the situation escalates and Cloud and his allies face Sephiroth, the game\u0027s main antagonist.",
+    "total_rating": 88.01848944830165,
+    "offers": 1
+  },
+  {
+    "game_id": 1103,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/co1ibt.jpg",
+    "name": "Super Metroid",
+    "platforms": [
+      5,
+      19,
+      37,
+      41,
+      47
+    ],
+    "popularity": 13.66617586211816,
+    "summary": "Super Metroid is an 2D, side-scrolling action-adventure game, which primarily takes place on the fictional planet Zebes—a large, open-ended world with areas connected by doors and elevators. The player controls Samus Aran as she searches the planet for a Metroid that was stolen by Ridley, the leader of the Space Pirates. Samus can run, jump, crouch, and fire a weapon in eight directions; she can also perform other actions, such as wall jumping—jumping from one wall to another in rapid succession to reach higher areas. The \"Moon Walk\" ability, named after the popular dance move of the same name, allows Samus to walk backwards while firing or charging her weapon. The heads-up display shows Samus\u0027 health, the supply mode for reserve tanks, icons that represent weapons, and an automap that shows her location and its surroundings.",
+    "total_rating": 95.90088112975096,
+    "offers": 1
+  },
+  {
+    "game_id": 26940,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/c0j3p6xjqlxoxm9u3f1b.jpg",
+    "name": "The Banner Saga 3",
+    "platforms": [
+      6,
+      14,
+      34,
+      39,
+      48,
+      49,
+      130
+    ],
+    "popularity": 13.61203692909602,
+    "summary": "Banner Saga 3 is the final dramatic chapter in the mature, story-driven Viking RPG series which has won over 20 awards and has been nominated for 4 BAFTA awards. As the world continues to crumble around you, who can you trust, how will you protect your allies and what choices will you make as the Darkness draws near?",
+    "total_rating": 90.88847940431296,
+    "offers": 1
+  },
+  {
+    "game_id": 11842,
+    "cover": "images.igdb.com/igdb/image/upload/t_thumb/ozfy1imhhwlkcawwwyi9.jpg",
+    "name": "Sword Art Online: Lost Song",
+    "platforms": [
+      6,
+      9,
+      46,
+      48
+    ],
+    "popularity": 12.3073434536723,
+    "summary": "Sword Art Online: Lost Song is an upcoming Japanese role-playing game and is based on the Sword Art Online light novel franchise. It features an original story based on the Alfheim Online arc and continues the timeline from the previous games. For the first time in the series, players are able to play as characters other than Kirito. In addition, players are able to create their own custom characters, though the story mode will still progress as if you were playing as Kirito. Parties of up to three characters may be formed, up from two in the prior games. In keeping with being set in Alfheim Online, players are able to fly as well as walk on the ground. However, walking within dungeons is mandatory. Auto-attacks are disabled while in flight mode, but players may instead target individual parts of an enemy\u0027s body as they see fit. In addition, this game adds the ability to use magic to attack enemies or to provide support to one\u0027s party. The game is the first in the series to allow for four-person online multiplayer.",
+    "total_rating": 79.7,
+    "offers": 15
   }
 ]

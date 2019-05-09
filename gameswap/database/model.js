@@ -40,6 +40,9 @@ const Games = sequelize.define('games', {
     type: Sequelize.STRING,
     allowNull: false
   },
+  platforms: {
+    type: Sequelize.ARRAY(Sequelize.TEXT) 
+  },
   popularity: {
     type: Sequelize.DOUBLE
   },
@@ -56,8 +59,8 @@ const Games = sequelize.define('games', {
   timestamps: false
 });
 
-const Consoles = sequelize.define('consoles', {
-  console_id: {
+const Platforms = sequelize.define('platforms', {
+  platform_id: {
     type: Sequelize.INTEGER,
     primaryKey: true
   },
@@ -82,7 +85,7 @@ const Offers = sequelize.define('offers', {
     type: Sequelize.INTEGER,
     allowNull: false
   },
-  console_id: {
+  platform_id: {
     type: Sequelize.INTEGER
   }
 }, {
@@ -94,4 +97,4 @@ sequelize.sync()
 .then(() => console.log('schemas have been synced'))
 .catch(err => console.log('unable to sync schemas: ', err))
 
-module.exports = { Users, Games, Consoles, Offers };
+module.exports = { Users, Games, Platforms, Offers };
