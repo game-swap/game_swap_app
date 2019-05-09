@@ -16,7 +16,13 @@ export default class Trade extends Component {
         isVisible={this.props.visible}
         onBackdropPress={this.props.close}
         overlayBackgroundColor="#141414"
-        children={<OverlayContent gamesOffered={this.state.gamesOffered} />}
+        children={
+          <OverlayContent
+            console={this.props.console}
+            gamesOffered={this.state.gamesOffered}
+            updateConsoleRequest={this.props.updateConsoleRequest}
+          />
+        }
         width="90%"
         height="auto"
         borderRadius={11}

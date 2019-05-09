@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     alignItems: 'stretch'
   },
   image: { width: 70, height: 70, marginRight: 11 },
-  textView: { width: '60%' },
+  textView: { width: '58%' },
   text: { color: '#d3d3d3', fontSize: 18, fontWeight: '700', paddingTop: 25 },
   buttonView: {
     width: '20%',
