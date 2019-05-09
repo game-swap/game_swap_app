@@ -8,11 +8,13 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "body-parser": "^1.19.0",
     "expo": "^32.0.0",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-native-elements": "^1.1.0",
-    "react-navigation": "^3.9.1"
+    "react-navigation": "^3.9.1",
+    "sequelize": "^5.8.5"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
