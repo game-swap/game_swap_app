@@ -9,6 +9,7 @@ export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      logIn: true,
       search: '',
       console: '',
       consoleIndex: null,
@@ -71,6 +72,10 @@ export default class Home extends Component {
       ],
       filteredGames: []
     };
+  }
+
+  loginVerify = () => {
+    this.setState({ logIn: false });   
   }
 
   updateSearch = search => {
@@ -192,7 +197,7 @@ export default class Home extends Component {
             borderBottomColor: '#696969'
           }}
         />
-        <SearchBar
+        {!this.state.logIn && <SearchBar
           containerStyle={{
             backgroundColor: '#141414',
             marginTop: 5,
@@ -203,8 +208,8 @@ export default class Home extends Component {
           onChangeText={this.updateSearch}
           onClear={this.clearSearch}
           value={search}
-        />
-        <ButtonGroup
+        />}
+        {!this.state.logIn && <ButtonGroup
           buttons={buttons}
           onPress={this.updateConsole}
           selectedIndex={consoleIndex}
@@ -217,8 +222,8 @@ export default class Home extends Component {
           textStyle={{ fontWeight: '700', color: '#7ed957' }}
           selectedButtonStyle={{ backgroundColor: '#7ed957' }}
           selectedTextStyle={{ fontWeight: '700', color: '#000' }}
-        />
-        <ScrollView>
+        />}
+        {!this.state.logIn && <ScrollView>
           {gamesToRender.map((game, index) => (
             <Game
               key={index}
@@ -228,7 +233,7 @@ export default class Home extends Component {
               tradeRequest={this.tradeRequest}
             />
           ))}
-        </ScrollView>
+        </ScrollView>}
       </View>
     );
   }
