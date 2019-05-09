@@ -237,17 +237,33 @@ export default class Home extends Component {
           selectedButtonStyle={{ backgroundColor: '#7ed957' }}
           selectedTextStyle={{ fontWeight: '700', color: '#000' }}
         />
-        <ScrollView>
-          {gamesToRender.map((game, index) => (
-            <Game
-              key={index}
-              index={index}
-              cover={game.cover}
-              name={game.name}
-              tradeRequest={this.tradeRequest}
-            />
-          ))}
-        </ScrollView>
+        {gamesToRender.length ? (
+          <ScrollView>
+            {gamesToRender.map((game, index) => (
+              <Game
+                key={index}
+                index={index}
+                cover={game.cover}
+                name={game.name}
+                tradeRequest={this.tradeRequest}
+              />
+            ))}
+          </ScrollView>
+        ) : (
+          <Text
+            style={{
+              fontSize: 18,
+              fontWeight: '700',
+              fontFamily: 'Verdana-Bold',
+              color: '#d3d3d3',
+              display: 'flex',
+              alignSelf: 'center',
+              marginTop: 30
+            }}
+          >
+            No Results Found
+          </Text>
+        )}
       </View>
     );
   }

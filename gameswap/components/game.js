@@ -6,7 +6,9 @@ const Game = props => (
   <View style={props.index === 0 ? styles.listItem1 : styles.listItem}>
     <Image source={{ uri: props.cover }} style={styles.image} />
     <View style={styles.textView}>
-      <Text style={styles.text}>{props.name}</Text>
+      <Text style={styles.text} numberOfLines={1}>
+        {props.name}
+      </Text>
     </View>
     <View style={styles.buttonView}>
       <Button
