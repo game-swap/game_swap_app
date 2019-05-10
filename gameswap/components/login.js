@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import { Button, Input } from 'react-native-elements';
+import axios from 'axios';
 
-export default class Login extends Component {
+export default class Login extends Component { 
+  loginVerify = () => {
+      axios
+      .get('/auth/google')
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -41,7 +47,8 @@ export default class Login extends Component {
 
         <Button
           title={'Sign in with Google'}
-          onPress={() => this.props.navigation.navigate('Home')}
+          onPress={() => this.loginVerify()}
+          // onPress={() => this.props.navigation.navigate('Home')}
           buttonStyle={{
             backgroundColor: '#000',
             borderWidth: 1,
