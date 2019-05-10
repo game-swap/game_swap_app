@@ -7,8 +7,8 @@ const sequelize = new Sequelize('gameswap', 'postgres', 'mynameisjeff', {
 });
 
 sequelize.authenticate()
-  .then(() => console.log('connected to postgres'))
-  .catch(err => console.log('unable to conenct to postgres', err))
+  .then(() => console.log('✔ Connected to Postgres'))
+  .catch(err => console.log('✔ unable to connect to postgres', err))
 
 
 module.exports = sequelize;

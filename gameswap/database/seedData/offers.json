@@ -1,86 +1,72 @@
 [
   {
-    "offer_id": 1,
     "user_id": 10,
     "game_id": 55190,
-    "console_id": 311
+    "platform_id": 130
   },
   {
-    "offer_id": 2,
     "user_id": 12,
     "game_id": 90101,
-    "console_id": 311
+    "platform_id": 130
   },
   {
-    "offer_id": 3,
     "user_id": 14,
     "game_id": 76882,
-    "console_id": 104
+    "platform_id": 48
   },
   {
-    "offer_id": 4,
     "user_id": 13,
     "game_id": 19560,
-    "console_id": 104
+    "platform_id": 48
   },
   {
-    "offer_id": 5,
     "user_id": 8,
     "game_id": 1942,
-    "console_id": 201
+    "platform_id": 49
   },
   {
-    "offer_id": 6,
     "user_id": 7,
-    "game_id": 7346,
-    "console_id": 311
+    "game_id": 26226,
+    "platform_id": 48
   },
   {
-    "offer_id": 7,
     "user_id": 9,
     "game_id": 26226,
-    "console_id": 104
+    "platform_id": 130
   },
   {
-    "offer_id": 8,
     "user_id": 3,
     "game_id": 25076,
-    "console_id": 104
+    "platform_id": 48
   },
   {
-    "offer_id": 9,
     "user_id": 4,
     "game_id": 12328,
-    "console_id": 102
+    "platform_id": 8
   },
   {
-    "offer_id": 10,
     "user_id": 11,
     "game_id": 1020,
-    "console_id": 103
+    "platform_id": 49
   },
   {
-    "offer_id": 11,
     "user_id": 6,
     "game_id": 1009,
-    "console_id": 104
+    "platform_id": 48
   },
   {
-    "offer_id": 12,
     "user_id": 5,
     "game_id": 9927,
-    "console_id": 104
+    "platform_id": 48
   },
   {
-    "offer_id": 13,
     "user_id": 1,
-    "game_id": 5550,
-    "console_id": 302
+    "game_id": 7346,
+    "platform_id": 130
   },
   {
-    "offer_id": 14,
     "user_id": 2,
     "game_id": 11156,
-    "console_id": 104
+    "platform_id": 48
   }
 ]

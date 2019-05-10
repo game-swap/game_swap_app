@@ -15,6 +15,6 @@ server.use(bodyParser.urlencoded({ extended: true }));
 server.use('/api', router);
 server.use('/auth', router);
 
-server.use(express.static(path.join(__dirname, '/../client/dist')));
+// server.use(express.static(path.join(__dirname, '/../client/dist')));
 
-server.listen(port, () => console.log(`connected at ${port}`));
+server.listen(port, () => console.log(`✔ Connected at Port ${port}`));

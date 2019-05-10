@@ -1,33 +1,34 @@
-const { Users, Games, Consoles, Offers } = require('../database/model');
+const { Users, Games, Platforms, Offers } = require('../database/model');
 const users = require('./seedData/users.json');
 const games = require('./seedData/games.json');
-const consoles = require('./seedData/consoles.json');
+const platforms = require('./seedData/platforms.json');
 const offers = require('./seedData/offers.json');
 
-const seedFunction = (users, games, consoles, offers) => {
+const seedFunction = (users, games, platforms, offers) => {
   Users
   .bulkCreate(users)
   .then(() => {
-    console.log('Users Table Seeded');
+    console.log('✔ Users Table Seeded');
   })
-  .catch(err => console.log(err))
+  .catch(err => console.log('✘ Error seeding Users Table: ', err))
   Games
   .bulkCreate(games)
   .then(() => {
-    console.log('Games Table Seeded');
+    console.log('✔ Games Table Seeded');
   })
-  .catch(err => console.log(err))
-  Consoles
-  .bulkCreate(consoles)
+  .catch(err => console.log('✘ Error seeding Games Table: ', err))
+  Platforms
+  .bulkCreate(platforms)
   .then(() => {
-    console.log('Consoles Table Seeded');
+    console.log('✔ Platforms Table Seeded');
   })
-  .catch(err => console.log(err))
+  .catch(err => console.log('✘ Error seeding Platforms Table: ', err))
   Offers
   .bulkCreate(offers)
   .then(() => {
-    console.log('Offers Table Seeded');
+    console.log('✔ Offers Table Seeded');
   })
+  .catch(err => console.log('✘ Error seeding Offers Table: ', err))
 }
 
-seedFunction(users, games, consoles, offers);
+seedFunction(users, games, platforms, offers);
