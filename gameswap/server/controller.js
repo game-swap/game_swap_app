@@ -34,27 +34,12 @@ const controller = {
   //   let { user_id } = req.params;
   //   Offers
   //   .findAll({ where: { user_id } })
-  //   .then((arrayData) => {
-  //     let deletePromises = [];
-  //     arrayData.forEach((offer) => {
-  //       let { offer_id, game_id } = offer;
-  //       deletePromises.push(helpers.deleteOffer(offer_id, game_id))
-  //     })
-  //     console.log(deletePromises)
-  //     Promise.all(deletePromises)
-  //     .then((gameIds) => {
-  //       console.log(gameIds)
-  //       let updatePromises = [];
-  //       gameIds.forEach((game_id) => {
-  //         updatePromises.push(helpers.updateNumberOfOffers(game_id))
-  //       })
-  //       console.log(gameIds)
-  //       Promise.all(updatePromises)
-  //       .then(values => res.send(values))
-  //       .catch('DIDNT WORK :(')
-  //     })
-  //     .catch(err => res.send(err))
+  //   .then((offersArray) => {
+  //     for (let i = 0; i < offersArray.length; i++) {
+
+  //     }
   //   })
+  //   .catch(err => res.send(err))
   // },
 
   findAllOffersSortedByNew: (req, res) => {
