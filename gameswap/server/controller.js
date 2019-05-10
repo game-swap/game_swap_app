@@ -30,10 +30,84 @@ let consoleIds = {
 
 const controller = {
   addNewUser: (req, res) => {
+    req.body.tradeRequestsLeft = 5;
     Users
     .create(req.body)
-    .then(data => res.send(data))
-    .catch(err => res.status(500).send('Error adding to Users table: ', err))
+    .then(data => res.status(200).send(data))
+    .catch(err => {
+      console.log('✘ Error adding to Users table')
+      res.status(500).send('Email or Username already exists. Try again.')
+    })
+  },
+
+  deleteUser: (req, res) => {
+    let { user_id } = req.params;
+    Users
+    .destroy({ where: { user_id } })
+    .then(() => res.status(200).send(`Deleted User Id #${user_id}`))
+    .catch(err => res.status(500).send(`✘ Error deleting User Id #${user_id}: , ${err}`))
+  },
+
+  findAllOffersByUserId: (req, res) => {
+    let { user_id } = req.params;
+    Offers
+    .findAll({ where: { user_id }})
+    .then((offers) => res.send(offers))
+    .catch(err => res.status(500).send(`Error finding all Offers by ${user_id}: `, err))
+  },
+  deleteAllOffersByUserId: (req, res) => {
+
+  },
+
+  findAllOffersSortedByNew: (req, res) => {
+    Offers
+    .findAll({ limit: 10, order: [["createdAt", "DESC"]] })
+    .then((offers) => res.send(offers))
+    .catch(err => res.status(500).send('Error finding all Offers: ', err))
+  },
+
+  findOfferByOfferId: (req, res) => {
+    let { offer_id } = req.params;
+    Offers
+    .findOne({ where: { offer_id }})
+    .then((offers) => res.send(offers))
+    .catch(err => res.status(500).send(`Error finding offer id #${offer_id}: `, err))
+  },
+  deleteOfferByOfferId: (req, res) => {
+    let { offer_id } = req.params;
+    Offers
+    .findOne({ where: { offer_id }})
+    .then((offer) => {
+      let { offer_id, game_id } = offer;
+      Offers
+      .destroy({ where: { offer_id } })
+      .then(() => {
+        Games
+        .findOne({ where: { game_id } })
+        .then((match) => {
+          if (match) {
+            let offers = match.offers - 1 || 0;
+            req.body.id = game_id;
+            controller.updateGameOffers(req, res, offers);
+          };
+        })
+        .catch(err => res.send('✘ Error updating offer number on Games table'))
+      })
+
+    })
+    .catch(err => res.status(500).send(`Error deleting offer id #${offer_id}: `, err))
+  },
+
+  findAllGames: (req, res) => {
+    console.log(req.query)
+    let query = { limit: 10 }
+    if (req.query.sort) {
+      query.order = [[req.query.sort, "DESC"]];
+    }
+    Games
+    .findAll(query)
+    .then((games) => res.send(games))
+    .catch(err => res.status(500).send('Error finding all Games: ', err))
   },
   postNewOffer: (req, res) => {
     // assumes req.body contains obj from api get request and console, see example below  
@@ -56,6 +130,14 @@ const controller = {
     })
     .catch(err => res.status(500).send('Error adding to Offers table: ', err));
   },
+  findGame: (req, res) => {
+    let game_id = req.params.game_id || req.body.game_id;
+    Games
+    .findOne({ where: { game_id } })
+    .then((data) => res.send(data))
+    .catch(err => res.status(500).send('Error finding in Games table: ', err))
+  },
+
   updateGameOffers: (req, res, offers) => {
     let game_id = req.body.id;
     Games
@@ -67,54 +149,10 @@ const controller = {
     req.body.cover = req.body.cover.url.substring(2); // trims cover url
     req.body.platforms = req.body.platforms.filter(i => consoleIds[i]); // sets platforms property
     req.body.offers = 1; // sets offers property
-    res.send(req.body)
-    // Games
-    // .create(req.body)
-    // .then(data => res.send(data))
-    // .catch(err => res.status(500).send('Error adding to Games table: ', err))
-  },
-  findGame: (req, res) => {
-    let game_id = req.body.id;
     Games
-    .findOne({ where: { game_id } })
-    .then((data) => res.send(data))
-    .catch(err => res.status(500).send('Error finding in Games table: ', err))
-  },
-  findAllOffersSortedByNew: (req, res) => {
-    Offers
-    .findAll({ limit: 10, order: [["createdAt", "DESC"]] })
-    .then((offers) => res.send(offers))
-    .catch(err => res.status(500).send('Error finding all Offers: ', err))
-  },
-  findAllOffersByUserId: (req, res) => {
-    let { user_id } = req.params;
-    Offers
-    .findAll({ where: { user_id }})
-    .then((offers) => res.send(offers))
-    .catch(err => res.status(500).send(`Error finding all Offers by ${user_id}: `, err))
-  },
-  findOfferByOfferId: (req, res) => {
-    let { offer_id } = req.params;
-    Offers
-    .findOne({ where: { offer_id }})
-    .then((offers) => res.send(offers))
-    .catch(err => res.status(500).send(`Error finding offer id #${offer_id}: `, err))
-  },
-  deleteOfferByOfferId: (req, res) => {
-    let { offer_id } = req.params;
-    Offers
-    .delete({ where: { offer_id }})
-    .then(() => {
-      // decrement games offers
-      res.send(`successfully deleted offer id #${offer_id}`)
-    })
-    .catch(err => res.status(500).send(`Error deleting offer id #${offer_id}: `, err))
-  },
-  deleteAllOffersByUserId: (req, res) => {
-
-  },
-  deleteUser: (req, res) => {
-
+    .create(req.body)
+    .then(data => res.send(data))
+    .catch(err => res.status(500).send('Error adding to Games table: ', err))
   }
 }
 
