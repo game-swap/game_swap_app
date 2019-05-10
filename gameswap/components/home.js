@@ -73,6 +73,10 @@ export default class Home extends Component {
     };
   }
 
+  loginVerify = () => {
+    this.setState({ logIn: false });   
+  }
+
   updateSearch = search => {
     let filteredGames = this.filterBySearch(search);
     this.setState({ search, filteredGames });
