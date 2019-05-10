@@ -5,7 +5,11 @@ import axios from 'axios';
 
 export default class Login extends Component {
   loginVerify = () => {
-    axios.get('/auth/google');
+    axios.get('http://localhost:3000/auth/google', {
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      }
+    });
   };
 
   render() {
