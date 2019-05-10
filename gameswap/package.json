@@ -15,10 +15,14 @@
     "expo": "^32.0.0",
     "express": "^4.16.4",
     "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^2.0.0",
     "pg": "^7.10.0",
     "react": "16.5.0",
     "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native-elements": "^1.1.0",
+    "react-navigation": "^3.9.1",
     "sequelize": "^5.8.5"
   },
   "devDependencies": {
