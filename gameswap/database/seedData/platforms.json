@@ -1,0 +1,102 @@
+[
+  {
+    "platform_id": 4,
+    "name": "Nintendo 64"
+  },
+  {
+    "platform_id": 7,
+    "name": "PlayStation"
+  },
+  {
+    "platform_id": 8,
+    "name": "PlayStation 2"
+  },
+  {
+    "platform_id": 9,
+    "name": "PlayStation 3"
+  },
+  {
+    "platform_id": 11,
+    "name": "Xbox"
+  },
+  {
+    "platform_id": 12,
+    "name": "Xbox 360"
+  },
+  {
+    "platform_id": 18,
+    "name": "Nintendo Entertainment System (NES)"
+  },
+  {
+    "platform_id": 19,
+    "name": "Super Nintendo Entertainment System (SNES)"
+  },
+  {
+    "platform_id": 20,
+    "name": "Nintendo DS"
+  },
+  {
+    "platform_id": 21,
+    "name": "Nintendo GameCube"
+  },
+  {
+    "platform_id": 36,
+    "name": "Xbox Live Arcade"
+  },
+  {
+    "platform_id": 37,
+    "name": "Nintendo 3DS"
+  },
+  {
+    "platform_id": 38,
+    "name": "PlayStation Portable"
+  },
+  {
+    "platform_id": 45,
+    "name": "PlayStation Network"
+  },
+  {
+    "platform_id": 46,
+    "name": "PlayStation Vita"
+  },
+  {
+    "platform_id": 47,
+    "name": "Virtual Console (Nintendo)"
+  },
+  {
+    "platform_id": 48,
+    "name": "PlayStation 4"
+  },
+  {
+    "platform_id": 49,
+    "name": "Xbox One"
+  },
+  {
+    "platform_id": 130,
+    "name": "Nintendo Switch"
+  },
+  {
+    "platform_id": 131,
+    "name": "Nintendo PlayStation"
+  },
+  {
+    "platform_id": 137,
+    "name": "New Nintendo 3DS"
+  },
+  {
+    "platform_id": 159,
+    "name": "Nintendo DSi"
+  },
+  {
+    "platform_id": 160,
+    "name": "Nintendo eShop"
+  },
+  {
+    "platform_id": 165,
+    "name": "PlayStation VR"
+  },
+  {
+    "platform_id": 167,
+    "name": "PlayStation 5"
+  }
+]

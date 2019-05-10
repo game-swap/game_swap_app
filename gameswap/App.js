@@ -1,21 +1,32 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { AppRegistry } from 'react-native';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
+import Login from './components/login.js';
+import Home from './components/home.js';
 
-export default class App extends React.Component {
+class App extends React.Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
-    );
+    return Login;
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const AppNavigator = createStackNavigator(
+  {
+    Login: {
+      screen: Login,
+      navigationOptions: { header: null, gesturesEnabled: false }
+    },
+    Home: {
+      screen: Home,
+      navigationOptions: { header: null, gesturesEnabled: false }
+    }
   },
-});
+  {
+    initialRouteName: 'Login',
+    headerMode: 'screen'
+  }
+);
+
+AppRegistry.registerComponent('GameSwap', () => App);
+
+export default createAppContainer(AppNavigator);
