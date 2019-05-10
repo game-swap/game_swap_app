@@ -3,11 +3,10 @@ import { View, StyleSheet, Image } from 'react-native';
 import { Button, Input } from 'react-native-elements';
 import axios from 'axios';
 
-export default class Login extends Component { 
+export default class Login extends Component {
   loginVerify = () => {
-      axios
-      .get('/auth/google')
-  }
+    axios.get('/auth/google');
+  };
 
   render() {
     return (
