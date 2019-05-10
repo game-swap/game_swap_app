@@ -10,7 +10,7 @@ router.route('/users/:user_id')
 
 router.route('/users/:user_id/offers')
 .get(controller.findAllOffersByUserId)
-.delete(controller.deleteAllOffersByUserId)
+// .delete(controller.deleteAllOffersByUserId)
 
 router.route('/offers')
 .get(controller.findAllOffersSortedByNew)

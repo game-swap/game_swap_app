@@ -20,7 +20,7 @@ const Users = sequelize.define('users', {
   password: {
     type: Sequelize.STRING
   },
-  tradeRequestsLeft: {
+  requests_left: {
     type: Sequelize.INTEGER,
     allowNull: false
   }
