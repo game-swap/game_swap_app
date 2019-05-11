@@ -5,7 +5,6 @@ const path = require('path');
 
 const server = express();
 const router = require('./router');
-const passportSetup = require('../config/config-template.js')
 const port = 3000;
 
 server.use(morgan('dev'));
