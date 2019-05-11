@@ -4,11 +4,13 @@ import { Header, SearchBar, ButtonGroup } from 'react-native-elements';
 import Logo from './logo.js';
 import Game from './game.js';
 import Trade from './trade.js';
+import Loading from './loading.js';
 
 export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      status: 'loading',
       search: '',
       console: '',
       consoleIndex: null,
@@ -72,6 +74,11 @@ export default class Home extends Component {
       filteredGames: []
     };
   }
+
+  // componentWillMount() {
+  // add axios get here .then()
+  //   this.setState({status: 'loaded'})
+  // }
 
   updateSearch = search => {
     let filteredGames = this.filterBySearch(search);
@@ -158,7 +165,8 @@ export default class Home extends Component {
   };
 
   render() {
-    let {
+    const {
+      status,
       search,
       console,
       consoleIndex,
@@ -166,103 +174,109 @@ export default class Home extends Component {
       games,
       filteredGames
     } = this.state;
-    let buttons = ['XBox One', 'PS4', 'Switch'];
-    let gamesToRender = search || console ? filteredGames : games;
+    const buttons = ['XBox One', 'PS4', 'Switch'];
+    const gamesToRender = search || console ? filteredGames : games;
     return (
-      <View style={{ height: '100%', backgroundColor: '#141414' }}>
-        <Trade
-          visible={this.state.trade}
-          close={this.closeOverlay}
-          updateConsoleRequest={this.updateConsoleRequest}
-          console={consoleRequest}
-        />
-        <Header
-          leftComponent={<Logo />}
-          centerComponent={
-            <View style={{ display: 'flex', flexDirection: 'row' }}>
-              <Text
-                style={{
-                  fontSize: 18,
-                  fontWeight: '700',
-                  fontFamily: 'Verdana-Bold',
-                  color: '#7ed957'
-                }}
-              >
-                Game
-              </Text>
-              <Text
-                style={{
-                  fontSize: 18,
-                  fontWeight: '700',
-                  fontFamily: 'Verdana-Bold',
-                  color: '#000'
-                }}
-              >
-                Swap
-              </Text>
-            </View>
-          }
-          rightComponent={{
-            icon: 'account-circle',
-            color: '#000'
-          }}
-          containerStyle={{
-            backgroundColor: '#696969',
-            borderBottomColor: '#696969'
-          }}
-        />
-        <SearchBar
-          containerStyle={{
-            backgroundColor: '#141414',
-            marginTop: 5,
-            borderTopColor: '#141414',
-            borderBottomColor: '#141414'
-          }}
-          placeholder="Search for Games"
-          onChangeText={this.updateSearch}
-          onClear={this.clearSearch}
-          value={search}
-        />
-        <ButtonGroup
-          buttons={buttons}
-          onPress={this.updateConsole}
-          selectedIndex={consoleIndex}
-          containerStyle={{
-            backgroundColor: '#000',
-            borderColor: '#d3d3d3',
-            marginBottom: 11
-          }}
-          innerBorderStyle={{ color: '#d3d3d3' }}
-          textStyle={{ fontWeight: '700', color: '#7ed957' }}
-          selectedButtonStyle={{ backgroundColor: '#7ed957' }}
-          selectedTextStyle={{ fontWeight: '700', color: '#000' }}
-        />
-        {gamesToRender.length ? (
-          <ScrollView>
-            {gamesToRender.map((game, index) => (
-              <Game
-                key={index}
-                index={index}
-                cover={game.cover}
-                name={game.name}
-                tradeRequest={this.tradeRequest}
-              />
-            ))}
-          </ScrollView>
+      <View>
+        {status === 'loading' ? (
+          <Loading />
         ) : (
-          <Text
-            style={{
-              fontSize: 18,
-              fontWeight: '700',
-              fontFamily: 'Verdana-Bold',
-              color: '#d3d3d3',
-              display: 'flex',
-              alignSelf: 'center',
-              marginTop: 30
-            }}
-          >
-            No Results Found
-          </Text>
+          <View style={{ height: '100%', backgroundColor: '#141414' }}>
+            <Trade
+              visible={this.state.trade}
+              close={this.closeOverlay}
+              updateConsoleRequest={this.updateConsoleRequest}
+              console={consoleRequest}
+            />
+            <Header
+              leftComponent={<Logo />}
+              centerComponent={
+                <View style={{ display: 'flex', flexDirection: 'row' }}>
+                  <Text
+                    style={{
+                      fontSize: 18,
+                      fontWeight: '700',
+                      fontFamily: 'Verdana-Bold',
+                      color: '#7ed957'
+                    }}
+                  >
+                    Game
+                  </Text>
+                  <Text
+                    style={{
+                      fontSize: 18,
+                      fontWeight: '700',
+                      fontFamily: 'Verdana-Bold',
+                      color: '#000'
+                    }}
+                  >
+                    Swap
+                  </Text>
+                </View>
+              }
+              rightComponent={{
+                icon: 'account-circle',
+                color: '#000'
+              }}
+              containerStyle={{
+                backgroundColor: '#696969',
+                borderBottomColor: '#696969'
+              }}
+            />
+            <SearchBar
+              containerStyle={{
+                backgroundColor: '#141414',
+                marginTop: 5,
+                borderTopColor: '#141414',
+                borderBottomColor: '#141414'
+              }}
+              placeholder="Search for Games"
+              onChangeText={this.updateSearch}
+              onClear={this.clearSearch}
+              value={search}
+            />
+            <ButtonGroup
+              buttons={buttons}
+              onPress={this.updateConsole}
+              selectedIndex={consoleIndex}
+              containerStyle={{
+                backgroundColor: '#000',
+                borderColor: '#d3d3d3',
+                marginBottom: 11
+              }}
+              innerBorderStyle={{ color: '#d3d3d3' }}
+              textStyle={{ fontWeight: '700', color: '#7ed957' }}
+              selectedButtonStyle={{ backgroundColor: '#7ed957' }}
+              selectedTextStyle={{ fontWeight: '700', color: '#000' }}
+            />
+            {gamesToRender.length ? (
+              <ScrollView>
+                {gamesToRender.map((game, index) => (
+                  <Game
+                    key={index}
+                    index={index}
+                    cover={game.cover}
+                    name={game.name}
+                    tradeRequest={this.tradeRequest}
+                  />
+                ))}
+              </ScrollView>
+            ) : (
+              <Text
+                style={{
+                  fontSize: 18,
+                  fontWeight: '700',
+                  fontFamily: 'Verdana-Bold',
+                  color: '#d3d3d3',
+                  display: 'flex',
+                  alignSelf: 'center',
+                  marginTop: 30
+                }}
+              >
+                No Results Found
+              </Text>
+            )}
+          </View>
         )}
       </View>
     );
