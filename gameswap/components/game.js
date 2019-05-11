@@ -28,7 +28,7 @@ const Game = props => (
 const styles = StyleSheet.create({
   listItem1: {
     width: '100%',
-    height: 77,
+    height: 79,
     paddingLeft: 7,
     paddingTop: 3,
     paddingBottom: 3,
