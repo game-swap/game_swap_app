@@ -6,8 +6,13 @@ import Checkbox from './checkbox.js';
 const Offer = props => (
   <View>
     <Text style={styles.text}>Offer to Trade</Text>
-    {props.gamesOffered.map((game, index) => (
-      <Checkbox key={index} name={game} unique={false} />
+    {props.gamesOwned.map((game, index) => (
+      <Checkbox
+        key={index}
+        name={game}
+        unique={false}
+        addOfferedGame={props.addOfferedGame}
+      />
     ))}
     <Button
       onPress={props.sendRequest}

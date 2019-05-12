@@ -4,15 +4,18 @@ import { Button } from 'react-native-elements';
 
 const Game = props => (
   <View style={props.index === 0 ? styles.listItem1 : styles.listItem}>
-    <Image source={{ uri: props.cover }} style={styles.image} />
+    <Image source={{ uri: props.game.cover }} style={styles.image} />
     <View style={styles.textView}>
       <Text style={styles.text} numberOfLines={1}>
-        {props.name}
+        {props.game.name}
       </Text>
     </View>
     <View style={styles.buttonView}>
       <Button
-        onPress={e => props.tradeRequest(e, props.index)}
+        onPress={e => {
+          props.tradeRequest(e, props.index);
+          props.setRequestedGame(props.game);
+        }}
         title={'Trade'}
         buttonStyle={{
           backgroundColor: '#000',

@@ -11,7 +11,10 @@ const OverlayContent = props => (
         updateConsoleRequest={props.updateConsoleRequest}
       />
     ) : (
-      <Offer gamesOffered={props.gamesOffered} />
+      <Offer
+        gamesOwned={props.gamesOwned}
+        addOfferedGame={props.addOfferedGame}
+      />
     )}
   </View>
 );
