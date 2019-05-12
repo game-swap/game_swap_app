@@ -7,6 +7,7 @@ router.route('/users')
 .post(controller.addNewUser)
 
 router.route('/users/:user_id')
+.get(controller.findUserByUserId)
 .delete(controller.deleteUser)
 
 router.route('/users/:user_id/offers')
