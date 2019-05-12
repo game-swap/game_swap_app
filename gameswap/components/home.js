@@ -17,68 +17,15 @@ export default class Home extends Component {
       consoleIndex: null,
       consoleRequest: '',
       trade: false,
-      games: [
-        // {
-        //   cover:
-        //     'https://images.g2a.com/newlayout/470x470/1x1x0/b99b28590aea/5bc9c521ae653a5fd7677389',
-        //   name: 'Red Dead Redemption 2',
-        //   platforms: ['49']
-        // },
-        // {
-        //   cover:
-        //     'https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Kingdom_Hearts_III_box_art.jpg/220px-Kingdom_Hearts_III_box_art.jpg',
-        //   name: 'Kingdom Hearts III',
-        //   platforms: ['49']
-        // },
-        // {
-        //   cover:
-        //     'https://www.mobygames.com/images/covers/l/541579-anthem-legion-of-dawn-edition-playstation-4-front-cover.jpg',
-        //   name: 'Anthem',
-        //   platforms: ['49']
-        // },
-        // {
-        //   cover: 'https://i.imgur.com/T50pVR6.jpg',
-        //   name: 'God of War',
-        //   platforms: ['48']
-        // },
-        // {
-        //   cover:
-        //     'https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Spider-Man_PS4_cover.jpg/220px-Spider-Man_PS4_cover.jpg',
-        //   name: 'Spider-Man',
-        //   platforms: ['48']
-        // },
-        // {
-        //   cover:
-        //     'https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Sekiro_art.jpg/220px-Sekiro_art.jpg',
-        //   name: 'Sekiro: Shadows Die Twice',
-        //   platforms: ['48']
-        // },
-        // {
-        //   cover:
-        //     'https://cdn02.nintendo-europe.com/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_SuperSmashBrosUltimate_02_image420w.jpg',
-        //   name: 'Super Smash Bros Ultimate',
-        //   platforms: ['130']
-        // },
-        // {
-        //   cover:
-        //     'https://www.playersinitiative.com/wp-content/uploads/2017/03/The-Legend-of-Zelda-Breath-of-the-Wild-Cover-Art-Game.jpg',
-        //   name: 'The Legend of Zelda: Breath of the Wild',
-        //   platforms: ['130']
-        // },
-        // {
-        //   cover:
-        //     'https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/Mortal_Kombat_11_cover_art.png/220px-Mortal_Kombat_11_cover_art.png',
-        //   name: 'Mortal Kombat 11',
-        //   platforms: ['130']
-        // }
-      ],
+      gameIndex: '',
+      games: [],
       filteredGames: []
     };
   }
 
   componentWillMount() {
     axios
-      .get('http://18.206.147.254:3000/api/games/?sort=offers')
+      .get('http://54.211.218.213:3000/api/games/?sort=offers')
       .then(games => this.setState({ status: 'loaded', games: games.data }))
       .catch(err => console.log(err));
   }
@@ -162,9 +109,9 @@ export default class Home extends Component {
     }
   };
 
-  tradeRequest = e => {
+  tradeRequest = (e, gameIndex) => {
     e.preventDefault();
-    this.setState({ trade: true });
+    this.setState({ trade: true, gameIndex });
   };
 
   closeOverlay = e => {
@@ -178,6 +125,7 @@ export default class Home extends Component {
       console,
       consoleIndex,
       consoleRequest,
+      gameIndex,
       games,
       filteredGames
     } = this.state;
@@ -194,6 +142,11 @@ export default class Home extends Component {
               close={this.closeOverlay}
               updateConsoleRequest={this.updateConsoleRequest}
               console={consoleRequest}
+              game={
+                filteredGames.length
+                  ? filteredGames[gameIndex]
+                  : games[gameIndex]
+              }
             />
             <Header
               leftComponent={<Logo />}

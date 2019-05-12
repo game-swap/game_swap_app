@@ -12,7 +12,7 @@ const Game = props => (
     </View>
     <View style={styles.buttonView}>
       <Button
-        onPress={props.tradeRequest}
+        onPress={e => props.tradeRequest(e, props.index)}
         title={'Trade'}
         buttonStyle={{
           backgroundColor: '#000',

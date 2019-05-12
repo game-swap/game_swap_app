@@ -6,7 +6,10 @@ import Offer from './offer.js';
 const OverlayContent = props => (
   <View>
     {!props.console ? (
-      <Console updateConsoleRequest={props.updateConsoleRequest} />
+      <Console
+        game={props.game}
+        updateConsoleRequest={props.updateConsoleRequest}
+      />
     ) : (
       <Offer gamesOffered={props.gamesOffered} />
     )}
