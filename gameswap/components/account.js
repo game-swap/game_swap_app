@@ -168,6 +168,20 @@ export default class Account extends Component {
               </View>
             </View>
 
+            <View style={styles.listItem}>
+              <View style={styles.textView}>
+                <Text style={styles.text}>
+                  Logout
+                </Text>
+              </View>
+              <View style={styles.iconView}>
+                <Icon 
+                  name='arrow-drop-down-circle'
+                  color='#7ed957'
+                />
+              </View>
+            </View>
+
           </ScrollView>
         </View>
       </View>
