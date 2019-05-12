@@ -5,12 +5,27 @@ import axios from 'axios';
 import Logo from './logo.js';
 import Game from './game.js';
 
-export default class Account extends Component {
+export default class Edit extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      status: 'loading',
+      games: [],
+      dropdown: false
     }
+    this.toggleDropDown = this.toggleDropDown.bind(this);
+  }
+
+  componentWillMount() {
+    axios
+      .get('http://54.211.218.213:3000/api/users/4/offers')
+      .then(games => this.setState({ status: 'loaded', games: games.data }))
+      .catch(err => console.log(err));
+  }
+
+  toggleDropDown() {
+    let dropdown = !this.state.dropdown;
+    this.setState({ dropdown });
   }
 
   render() {
@@ -39,8 +54,7 @@ export default class Account extends Component {
         alignItems: 'center',
       },
       textView: { width: "82%", justifyContent: "center" },
-      heading: { color: '#d3d3d3', fontSize: 18, fontWeight: '700', paddingTop: 20 },
-      subheading: { color: '#d3d3d3', fontSize: 14, fontWeight: '500', paddingTop: 10 },
+      text: { color: '#d3d3d3', fontSize: 18, fontWeight: '700', paddingTop: 20 },
       iconView: {
         width: '20%',
         height: 80,
@@ -57,7 +71,7 @@ export default class Account extends Component {
             icon: 'arrow-back',
             color: '#000',
             marginLeft: '11%',
-            onPress: () => this.props.navigation.navigate('Home')
+            onPress: () => this.props.navigation.navigate('Account')
           }}
           centerComponent={
             <View style={{ display: 'flex', flexDirection: 'row' }}>
@@ -94,11 +108,8 @@ export default class Account extends Component {
           <View style={styles.listItem1}>
 
             <View style={styles.textView}>
-              <Text style={styles.heading}>
-                Edit Profile
-              </Text>
-              <Text style={styles.subheading}>
-                username
+              <Text style={styles.text}>
+                What games do you want to swap?
               </Text>
             </View>
             <View style={styles.iconView}>
@@ -114,25 +125,43 @@ export default class Account extends Component {
 
             <View style={styles.listItem}>
               <View style={styles.textView}>
-                <Text style={styles.heading} onPress={() => this.props.navigation.navigate('Edit')}>
-                  Add / Remove Games For Swap
+                <Text style={styles.text} onPress={this.toggleDropDown}>
+                  Add New Game For Swap
                 </Text>
               </View>
               <View style={styles.iconView}>
                 <Icon 
-                  name='chevron-right'
+                  name='arrow-drop-down-circle'
                   color='#7ed957'
-                  onPress={() => this.props.navigation.navigate('Edit')}
+                  onPress={this.toggleDropDown}
                 />
               </View>
             </View>
+
+          {
+            this.state.dropdown && (
+              <View style={styles.listItem}>
+                <View style={styles.textView}>
+                  <Text style={styles.text}>
+                    Game
+                  </Text>
+                </View>
+                <View style={styles.iconView}>
+                  <Icon 
+                    name='edit'
+                    color='#7ed957'
+                  />
+                </View>
+              </View>
+            )
+          }
 
             {/* Account Info */}
             <View> 
 
               <View style={styles.listItem}>
                 <View style={styles.textView}>
-                  <Text style={styles.heading}>
+                  <Text style={styles.text}>
                     Change Username
                   </Text>
                 </View>
@@ -145,7 +174,7 @@ export default class Account extends Component {
               </View>
               <View style={styles.listItem}> 
                 <View style={styles.textView}>
-                  <Text style={styles.heading}>
+                  <Text style={styles.text}>
                     Update Email
                   </Text>
                 </View>
@@ -158,7 +187,7 @@ export default class Account extends Component {
               </View>
               <View style={styles.listItem}>
                 <View style={styles.textView}>
-                  <Text style={styles.heading}>
+                  <Text style={styles.text}>
                     Change Password
                   </Text>
                 </View>
@@ -174,7 +203,7 @@ export default class Account extends Component {
 
             <View style={styles.listItem}>
               <View style={styles.textView}>
-                <Text style={styles.heading} onPress={() => this.props.navigation.navigate('Login')}>
+                <Text style={styles.text} onPress={() => this.props.navigation.navigate('Login')}>
                   Logout
                 </Text>
               </View>
