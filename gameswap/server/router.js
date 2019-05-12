@@ -29,7 +29,6 @@ router.route('/games/:game_id')
 .get(controller.findGame)
 
 
-
 router.route('/google')
 .get(
     passport.authenticate('google', {
