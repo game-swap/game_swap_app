@@ -7,24 +7,35 @@ export default class Console extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      checkedConsole: '',
-      consoles: ['XBox One', 'PS4', 'Switch']
+      checkedConsole: ''
     };
     this.setCheckedConsole = this.setCheckedConsole.bind(this);
   }
 
-  getConsoles() {}
+  componentDidMount() {
+    const platformCodes = { '48': 'PS4', '49': 'XBox One', '130': 'Switch' };
+    const platforms = this.props.game.platforms
+      .filter(code => platformCodes[code])
+      .map(code => platformCodes[code]);
+    if (platforms.length === 1) {
+      this.setCheckedConsole(platforms[0]);
+    }
+  }
 
   setCheckedConsole(console) {
     this.setState({ checkedConsole: console });
   }
 
   render() {
-    let { consoles, checkedConsole } = this.state;
+    const { checkedConsole } = this.state;
+    const platformCodes = { '48': 'PS4', '49': 'XBox One', '130': 'Switch' };
+    const platforms = this.props.game.platforms
+      .filter(code => platformCodes[code])
+      .map(code => platformCodes[code]);
     return (
       <View>
         <Text style={styles.text}>Choose a Console</Text>
-        {consoles.map((console, index) => (
+        {platforms.map((console, index) => (
           <Checkbox
             key={index}
             name={console}

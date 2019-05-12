@@ -21,6 +21,7 @@ export default class Trade extends Component {
         overlayBackgroundColor="#141414"
         children={
           <OverlayContent
+            game={this.props.game}
             console={this.props.console}
             gamesOffered={this.state.gamesOffered}
             updateConsoleRequest={this.props.updateConsoleRequest}

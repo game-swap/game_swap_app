@@ -12,7 +12,7 @@ const Game = props => (
     </View>
     <View style={styles.buttonView}>
       <Button
-        onPress={props.tradeRequest}
+        onPress={e => props.tradeRequest(e, props.index)}
         title={'Trade'}
         buttonStyle={{
           backgroundColor: '#000',
@@ -28,7 +28,7 @@ const Game = props => (
 const styles = StyleSheet.create({
   listItem1: {
     width: '100%',
-    height: 77,
+    height: 79,
     paddingLeft: 7,
     paddingTop: 3,
     paddingBottom: 3,
