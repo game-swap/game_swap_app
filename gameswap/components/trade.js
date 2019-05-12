@@ -6,7 +6,7 @@ export default class Trade extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      gamesOffered: ['Red Dead Redemption', 'Kingdom Hearts III', 'Anthem']
+      gamesOwned: ['Red Dead Redemption', 'Kingdom Hearts III', 'Anthem']
     };
   }
 
@@ -23,8 +23,11 @@ export default class Trade extends Component {
           <OverlayContent
             game={this.props.game}
             console={this.props.console}
-            gamesOffered={this.state.gamesOffered}
+            gamesOwned={this.state.gamesOwned}
             updateConsoleRequest={this.props.updateConsoleRequest}
+            addOfferedGame={this.props.addOfferedGame}
+            sendRequest={this.props.sendRequest}
+            close={this.props.close}
           />
         }
         width="90%"
