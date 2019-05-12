@@ -26,6 +26,8 @@ export default class Trade extends Component {
             gamesOwned={this.state.gamesOwned}
             updateConsoleRequest={this.props.updateConsoleRequest}
             addOfferedGame={this.props.addOfferedGame}
+            sendRequest={this.props.sendRequest}
+            close={this.props.close}
           />
         }
         width="90%"
