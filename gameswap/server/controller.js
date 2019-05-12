@@ -1,4 +1,4 @@
-const { Users, Games, Platforms, Offers} = require('../database/model');
+const { Users, Games, Offers} = require('../database/model');
 const { consoleIds, helpers } = require('./dbHelpers');
 
 const controller = {
@@ -33,17 +33,6 @@ const controller = {
     .then((offers) => res.send(offers))
     .catch(err => res.status(500).send(`Error finding all Offers by ${user_id}: `, err))
   },
-  // deleteAllOffersByUserId: (req, res) => {
-  //   let { user_id } = req.params;
-  //   Offers
-  //   .findAll({ where: { user_id } })
-  //   .then((offersArray) => {
-  //     for (let i = 0; i < offersArray.length; i++) {
-
-  //     }
-  //   })
-  //   .catch(err => res.send(err))
-  // },
   findAllOffersSortedByNew: (req, res) => {
     Offers
     .findAll({ order: [["createdAt", "DESC"]] })
@@ -133,12 +122,23 @@ const controller = {
     .create(req.body)
     .then(data => res.send(data))
     .catch(err => res.status(500).send('Error adding to Games table: ', err))
-  }
+  },
 }
 
 module.exports = controller;
 
 /* 
+deleteAllOffersByUserId: (req, res) => {
+  let { user_id } = req.params;
+  Offers
+  .findAll({ where: { user_id } })
+  .then((offersArray) => {
+    for (let i = 0; i < offersArray.length; i++) {
+
+    }
+  })
+  .catch(err => res.send(err))
+},
 
 Example req.body received for addNewGame:
 {
