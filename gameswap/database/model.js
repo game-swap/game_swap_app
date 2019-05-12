@@ -21,7 +21,17 @@ const Users = sequelize.define('users', {
     type: Sequelize.STRING
   }
 }, {
-  timestamps: false
+  timestamps: false,
+  instanceMethods: {
+    generateHash: {
+      generateHash(password) {
+        return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null)
+      },
+      validPassword(password) {
+        return bcrypt.compareSync(password, this.local.password)
+      }
+    }
+  }
 });
 
 const Games = sequelize.define('games', {

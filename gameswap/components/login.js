@@ -3,6 +3,14 @@ import { View, StyleSheet, Image } from 'react-native';
 import { Button, Input } from 'react-native-elements';
 
 export default class Login extends Component {
+  loginVerify = () => {
+    axios.get('http://localhost:3000/auth/google', {
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      }
+    });
+  };
+
   render() {
     return (
       <View style={styles.container}>
@@ -27,7 +35,7 @@ export default class Login extends Component {
         />
         <Button
           title={'Login'}
-          onPress={() => this.props.navigation.navigate('Home')}
+          onPress={() => this.loginVerify()}
           buttonStyle={{
             backgroundColor: '#000',
             borderWidth: 1,
@@ -41,7 +49,7 @@ export default class Login extends Component {
 
         <Button
           title={'Sign in with Google'}
-          onPress={() => this.props.navigation.navigate('Home')}
+          onPress={() => this.loginVerify()}
           buttonStyle={{
             backgroundColor: '#000',
             borderWidth: 1,
