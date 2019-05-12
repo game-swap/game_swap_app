@@ -12,6 +12,13 @@ const controller = {
       res.status(500).send('Email or Username already exists. Try again.')
     })
   },
+  findUserByUserId: (req, res) => {
+    let { user_id } = req.params;
+    Users
+    .findOne({ where: { user_id } })
+    .then(userInfo => res.status(200).send(userInfo))
+    .catch(err => res.status(500).send(`✘ Error fetching User Id #${user_id}: , ${err}`))
+  },
   deleteUser: (req, res) => {
     let { user_id } = req.params;
     Users
