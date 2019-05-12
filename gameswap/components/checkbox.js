@@ -18,7 +18,9 @@ export default class Checkbox extends Component {
           if (this.props.unique) {
             this.props.setCheckedConsole(this.props.name);
           } else {
-            this.setState({ checked: !this.state.checked });
+            this.setState({ checked: !this.state.checked }, () =>
+              this.props.addOfferedGame(this.props.name)
+            );
           }
         }}
         containerStyle={{

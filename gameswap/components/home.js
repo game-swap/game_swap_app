@@ -26,6 +26,7 @@ export default class Home extends Component {
     };
     this.setRequestedGame = this.setRequestedGame.bind(this);
     this.addOfferedGame = this.addOfferedGame.bind(this);
+    this.sendRequest = this.sendRequest.bind(this);
   }
 
   componentWillMount() {
@@ -38,15 +39,23 @@ export default class Home extends Component {
   sendRequest() {
     const { game_id, gameName, consoleRequest, offeredGames } = this.state;
     const platformCodes = { PS4: '48', 'XBox One': '49', Switch: '130' };
-    axios.post('18.220.172.51:3000/api/email', {
-      buyer: 'Julian Yuen',
-      user_id: 3,
-      game: gameName,
-      game_id: game_id,
-      platform_id: platformCodes[consoleRequest],
-      offer: offeredGames,
-      email: 'therealspiderman@hr.com'
-    });
+    if (offeredGames.length) {
+      axios({
+        method: 'post',
+        url: 'http://18.220.172.51:3000/api/email/',
+        data: {
+          buyer: 'Julian Yuen',
+          user_id: 3,
+          game: gameName,
+          game_id: game_id,
+          platform_id: platformCodes[consoleRequest],
+          offer: offeredGames,
+          email: 'unclej@hr.com'
+        }
+      });
+      this.setState({ offeredGames: [] });
+      return true;
+    }
   }
 
   setRequestedGame = game => {
@@ -55,10 +64,10 @@ export default class Home extends Component {
   };
 
   addOfferedGame = game => {
-    const { offeredGames } = this.state;
-    offeredGames.includes(game.name)
-      ? offeredGames.push(game.name)
-      : offeredGames.filter(gameName => gameName !== game.name);
+    let { offeredGames } = this.state;
+    offeredGames.includes(game)
+      ? (offeredGames = offeredGames.filter(gameName => gameName !== game))
+      : offeredGames.push(game);
     this.setState({ offeredGames });
   };
 
@@ -147,7 +156,7 @@ export default class Home extends Component {
   };
 
   closeOverlay = e => {
-    this.setState({ trade: false });
+    this.setState({ trade: false, offeredGames: [] });
   };
 
   render() {
@@ -174,6 +183,7 @@ export default class Home extends Component {
               close={this.closeOverlay}
               updateConsoleRequest={this.updateConsoleRequest}
               addOfferedGame={this.addOfferedGame}
+              sendRequest={this.sendRequest}
               console={consoleRequest}
               game={
                 filteredGames.length

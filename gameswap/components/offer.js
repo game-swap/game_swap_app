@@ -15,7 +15,12 @@ const Offer = props => (
       />
     ))}
     <Button
-      onPress={props.sendRequest}
+      onPress={() => {
+        if (props.sendRequest()) {
+          props.close();
+          props.updateConsoleRequest('');
+        }
+      }}
       title={'Make Offer'}
       buttonStyle={{
         display: 'flex',
