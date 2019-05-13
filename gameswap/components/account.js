@@ -13,7 +13,7 @@ export default class Account extends Component {
       username_opened: false,
       email_opened: false,
       password_opened: false
-    }
+    };
   }
 
   render() {
@@ -39,16 +39,21 @@ export default class Account extends Component {
         borderBottomWidth: 2,
         borderColor: '#7ed957',
         flexDirection: 'row',
-        alignItems: 'center',
+        alignItems: 'center'
       },
-      textView: { width: "82%", justifyContent: "center" },
-      heading: { color: '#d3d3d3', fontSize: 18, fontWeight: '700', paddingTop: 20 },
-      subheading: { 
-        color: '#d3d3d3', 
-        fontSize: 15, 
-        fontWeight: '500', 
-        fontStyle: 'italic', 
-        paddingTop: 9 
+      textView: { width: '82%', justifyContent: 'center' },
+      heading: {
+        color: '#d3d3d3',
+        fontSize: 18,
+        fontWeight: '700',
+        paddingTop: 20
+      },
+      subheading: {
+        color: '#d3d3d3',
+        fontSize: 15,
+        fontWeight: '500',
+        fontStyle: 'italic',
+        paddingTop: 9
       },
       iconView: {
         width: '20%',
@@ -57,7 +62,7 @@ export default class Account extends Component {
         paddingRight: 7,
         justifyContent: 'center'
       }
-    })
+    });
 
     return (
       <View>
@@ -66,7 +71,8 @@ export default class Account extends Component {
             icon: 'arrow-back',
             color: '#000',
             marginLeft: '11%',
-            onPress: () => this.props.navigation.navigate('Home')
+            onPress: () => this.props.navigation.navigate('Home'),
+            underlayColor: '#696969'
           }}
           centerComponent={
             <View style={{ display: 'flex', flexDirection: 'row' }}>
@@ -99,106 +105,83 @@ export default class Account extends Component {
           }}
         />
         <View style={{ height: '100%', backgroundColor: '#141414' }}>
-
           <View style={styles.listItem1}>
-
             <View style={styles.textView}>
-              <Text style={styles.heading}>
-                Settings
-              </Text>
-              <Text style={styles.subheading}>
-                uncle_jay
-              </Text>
+              <Text style={styles.heading}>Settings</Text>
+              <Text style={styles.subheading}>uncle_jay</Text>
             </View>
             <View style={styles.iconView}>
-              <Icon
-                name='account-circle'
-                size={60}
-              />
+              <Icon name="account-circle" size={60} />
             </View>
-
           </View>
 
           <ScrollView>
-
             <View style={styles.listItem}>
               <View style={styles.textView}>
-                <Text style={styles.heading} onPress={() => this.props.navigation.navigate('Edit')}>
+                <Text
+                  style={styles.heading}
+                  onPress={() => this.props.navigation.navigate('Edit')}
+                >
                   Add / Remove Games For Swap
                 </Text>
               </View>
               <View style={styles.iconView}>
-                <Icon 
-                  name='chevron-right'
-                  color='#7ed957'
+                <Icon
+                  name="chevron-right"
+                  color="#7ed957"
                   onPress={() => this.props.navigation.navigate('Edit')}
                 />
               </View>
             </View>
 
             {/* Account Info */}
-            <View> 
-
+            <View>
               <View style={styles.listItem}>
                 <View style={styles.textView}>
-                  <Text style={styles.heading}>
-                    Change Username
-                  </Text>
+                  <Text style={styles.heading}>Change Username</Text>
                 </View>
                 <View style={styles.iconView}>
-                  <Icon 
-                    name='edit'
-                    color='#7ed957'
-                  />
-                </View>
-              </View>
-              <View style={styles.listItem}> 
-                <View style={styles.textView}>
-                  <Text style={styles.heading}>
-                    Update Email
-                  </Text>
-                </View>
-                <View style={styles.iconView}>
-                  <Icon 
-                    name='edit'
-                    color='#7ed957'
-                  />
+                  <Icon name="edit" color="#7ed957" />
                 </View>
               </View>
               <View style={styles.listItem}>
                 <View style={styles.textView}>
-                  <Text style={styles.heading}>
-                    Change Password
-                  </Text>
+                  <Text style={styles.heading}>Update Email</Text>
                 </View>
                 <View style={styles.iconView}>
-                  <Icon 
-                    name='edit'
-                    color='#7ed957'
-                  />
+                  <Icon name="edit" color="#7ed957" />
                 </View>
               </View>
-
+              <View style={styles.listItem}>
+                <View style={styles.textView}>
+                  <Text style={styles.heading}>Change Password</Text>
+                </View>
+                <View style={styles.iconView}>
+                  <Icon name="edit" color="#7ed957" />
+                </View>
+              </View>
             </View>
 
             <View style={styles.listItem}>
               <View style={styles.textView}>
-                <Text style={styles.heading} onPress={() => this.props.navigation.navigate('Login')}>
+                <Text
+                  style={styles.heading}
+                  onPress={() => this.props.navigation.navigate('Login')}
+                >
                   Logout
                 </Text>
               </View>
               <View style={styles.iconView}>
-                <Icon 
-                  name='exit-to-app'
-                  color='#7ed957'
+                <Icon
+                  name="exit-to-app"
+                  color="#7ed957"
                   onPress={() => this.props.navigation.navigate('Login')}
                 />
               </View>
             </View>
-
           </ScrollView>
         </View>
       </View>
-    )
+    );
   }
 }

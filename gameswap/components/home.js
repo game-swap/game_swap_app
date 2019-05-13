@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, ScrollView, Text, TouchableOpacity } from 'react-native';
+import { View, ScrollView, Text } from 'react-native';
 import { Header, SearchBar, ButtonGroup } from 'react-native-elements';
 import axios from 'axios';
 import Logo from './logo.js';
@@ -33,7 +33,7 @@ export default class Home extends Component {
     axios
       .get('http://54.211.218.213:3000/api/games/?sort=offers')
       .then(games => this.setState({ status: 'loaded', games: games.data }))
-      .catch(err => console.log(err));
+      .catch(err => console.log(err)); // display 'error loading' + refresh icon
   }
 
   sendRequest() {
@@ -45,14 +45,16 @@ export default class Home extends Component {
         url: 'http://18.220.172.51:3000/api/email/',
         data: {
           buyer: 'Julian Yuen',
-          user_id: 3,
+          user_id: 7,
           game: gameName,
           game_id: game_id,
           platform_id: platformCodes[consoleRequest],
           offer: offeredGames,
           email: 'unclej@hr.com'
         }
-      });
+      })
+        .then(response => console.log(response)) // display success message
+        .catch(err => console.log(err)); // display error message + retry button
       this.setState({ offeredGames: [] });
       return true;
     }
@@ -196,7 +198,8 @@ export default class Home extends Component {
                 icon: 'account-circle',
                 color: '#000',
                 marginLeft: '11%',
-                onPress: () => this.props.navigation.navigate('Account')
+                onPress: () => this.props.navigation.navigate('Account'),
+                underlayColor: '#696969'
               }}
               centerComponent={
                 <View style={{ display: 'flex', flexDirection: 'row' }}>

@@ -15,7 +15,7 @@ export default class Edit extends Component {
       filteredGames: [],
       addNewOpened: false,
       currentGamesOpened: false
-    }
+    };
     this.toggleAddNew = this.toggleAddNew.bind(this);
     this.toggleCurrentGamesOpened = this.toggleCurrentGamesOpened.bind(this);
     this.updateSearch = this.updateSearch.bind(this);
@@ -27,7 +27,7 @@ export default class Edit extends Component {
     axios
       .get('http://54.211.218.213:3000/api/games/?sort=offers')
       .then(games => {
-        this.setState({ status: 'loaded', games })
+        this.setState({ status: 'loaded', games });
       })
       .catch(err => console.log(err));
   }
@@ -89,11 +89,21 @@ export default class Edit extends Component {
         borderBottomWidth: 2,
         borderColor: '#7ed957',
         flexDirection: 'row',
-        alignItems: 'center',
+        alignItems: 'center'
       },
-      textView: { width: "82%", justifyContent: "center" },
-      text: { color: '#d3d3d3', fontSize: 18, fontWeight: '700', paddingTop: 20 },
-      game: { color: '#d3d3d3', fontSize: 18, fontWeight: '700', paddingTop: 20 },
+      textView: { width: '82%', justifyContent: 'center' },
+      text: {
+        color: '#d3d3d3',
+        fontSize: 18,
+        fontWeight: '700',
+        paddingTop: 20
+      },
+      game: {
+        color: '#d3d3d3',
+        fontSize: 18,
+        fontWeight: '700',
+        paddingTop: 20
+      },
       iconView: {
         width: '20%',
         height: 80,
@@ -101,7 +111,7 @@ export default class Edit extends Component {
         paddingRight: 7,
         justifyContent: 'center'
       }
-    })
+    });
 
     return (
       <View>
@@ -110,7 +120,8 @@ export default class Edit extends Component {
             icon: 'arrow-back',
             color: '#000',
             marginLeft: '11%',
-            onPress: () => this.props.navigation.navigate('Account')
+            onPress: () => this.props.navigation.navigate('Account'),
+            underlayColor: '#696969'
           }}
           centerComponent={
             <View style={{ display: 'flex', flexDirection: 'row' }}>
@@ -143,25 +154,16 @@ export default class Edit extends Component {
           }}
         />
         <View style={{ height: '100%', backgroundColor: '#141414' }}>
-
           <View style={styles.listItem1}>
-
             <View style={styles.textView}>
-              <Text style={styles.text}>
-                What games do you want to swap?
-              </Text>
+              <Text style={styles.text}>What games do you want to swap?</Text>
             </View>
             <View style={styles.iconView}>
-              <Icon
-                name='account-circle'
-                size={60}
-              />
+              <Icon name="account-circle" size={60} />
             </View>
-
           </View>
 
           <ScrollView>
-
             <View style={styles.listItem}>
               <View style={styles.textView}>
                 <Text style={styles.text} onPress={this.toggleAddNew}>
@@ -169,83 +171,77 @@ export default class Edit extends Component {
                 </Text>
               </View>
               <View style={styles.iconView}>
-                <Icon 
-                  name='arrow-drop-down-circle'
-                  color='#7ed957'
+                <Icon
+                  name="arrow-drop-down-circle"
+                  color="#7ed957"
                   onPress={this.toggleAddNew}
                 />
               </View>
             </View>
 
-          {
-            this.state.addNewOpened && (
+            {this.state.addNewOpened && (
               <SearchBar
-              containerStyle={{
-                backgroundColor: '#141414',
-                marginTop: 5,
-                borderTopColor: '#141414',
-                borderBottomColor: '#141414'
-              }}
-              placeholder="Search for Games"
-              onChangeText={this.updateSearch}
-              onClear={this.clearSearch}
-              value={this.state.search}
-            />
-            )
-          }
+                containerStyle={{
+                  backgroundColor: '#141414',
+                  marginTop: 5,
+                  borderTopColor: '#141414',
+                  borderBottomColor: '#141414'
+                }}
+                placeholder="Search for Games"
+                onChangeText={this.updateSearch}
+                onClear={this.clearSearch}
+                value={this.state.search}
+              />
+            )}
 
             {/* Account Info */}
-            <View> 
-
+            <View>
               <View style={styles.listItem}>
                 <View style={styles.textView}>
-                  <Text style={styles.text} onPress={this.toggleCurrentGamesOpened}>
+                  <Text
+                    style={styles.text}
+                    onPress={this.toggleCurrentGamesOpened}
+                  >
                     Your Games For Swap
                   </Text>
                 </View>
-                <View style={styles.iconView} onPress={this.toggleCurrentGamesOpened}>
-                  <Icon 
-                    name='arrow-drop-down-circle'
-                    color='#7ed957'
-                  />
+                <View
+                  style={styles.iconView}
+                  onPress={this.toggleCurrentGamesOpened}
+                >
+                  <Icon name="arrow-drop-down-circle" color="#7ed957" />
                 </View>
               </View>
 
-            {
-              this.state.currentGamesOpened && (
+              {this.state.currentGamesOpened && (
                 <ScrollView>
                   {this.state.games.map(game => {
-                    <ownedGames 
-                    key={index}
-                    index={index}
-                    game={game}
-                    />
+                    <ownedGames key={index} index={index} game={game} />;
                   })}
                 </ScrollView>
-              )
-            }
-              
-
+              )}
             </View>
 
             <View style={styles.listItem}>
               <View style={styles.textView}>
-                <Text style={styles.text} onPress={() => this.props.navigation.navigate('Home')}>
+                <Text
+                  style={styles.text}
+                  onPress={() => this.props.navigation.navigate('Home')}
+                >
                   Return to homepage
                 </Text>
               </View>
               <View style={styles.iconView}>
-                <Icon 
-                  name='exit-to-app'
-                  color='#7ed957'
+                <Icon
+                  name="exit-to-app"
+                  color="#7ed957"
                   onPress={() => this.props.navigation.navigate('Login')}
                 />
               </View>
             </View>
-
           </ScrollView>
         </View>
       </View>
-    )
+    );
   }
 }
