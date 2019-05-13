@@ -9,7 +9,10 @@ export default class Account extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      user_id: 3,
+      username_opened: false,
+      email_opened: false,
+      password_opened: false
     }
   }
 
@@ -40,7 +43,13 @@ export default class Account extends Component {
       },
       textView: { width: "82%", justifyContent: "center" },
       heading: { color: '#d3d3d3', fontSize: 18, fontWeight: '700', paddingTop: 20 },
-      subheading: { color: '#d3d3d3', fontSize: 14, fontWeight: '500', paddingTop: 10 },
+      subheading: { 
+        color: '#d3d3d3', 
+        fontSize: 15, 
+        fontWeight: '500', 
+        fontStyle: 'italic', 
+        paddingTop: 9 
+      },
       iconView: {
         width: '20%',
         height: 80,
@@ -95,10 +104,10 @@ export default class Account extends Component {
 
             <View style={styles.textView}>
               <Text style={styles.heading}>
-                Edit Profile
+                Settings
               </Text>
               <Text style={styles.subheading}>
-                username
+                uncle_jay
               </Text>
             </View>
             <View style={styles.iconView}>
