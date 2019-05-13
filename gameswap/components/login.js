@@ -27,11 +27,12 @@ export default class Login extends Component {
         />
         <Input
           placeholder="Password"
+          secureTextEntry={true}
           inputContainerStyle={{
             width: 300,
             marginBottom: 10,
             left: 45,
-            bottom: 0
+            bottom: 0,
           }}
         />
         <Button

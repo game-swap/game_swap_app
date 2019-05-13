@@ -4,6 +4,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import Login from './components/login.js';
 import Home from './components/home.js';
 import Account from './components/account.js';
+import Edit from './components/edit.js';
 
 class App extends React.Component {
   render() {
@@ -23,6 +24,10 @@ const AppNavigator = createStackNavigator(
     },
     Account: {
       screen: Account,
+      navigationOptions: { header: null }
+    },
+    Edit: {
+      screen: Edit,
       navigationOptions: { header: null }
     }
   },
